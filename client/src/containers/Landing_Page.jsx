@@ -6,7 +6,7 @@ import DemoGallery from "../components/HomePage/Sections/DemoGallery";
 import Testimonials from "../components/HomePage/Sections/Testimonials";
 import Pricing from "../components/HomePage/Sections/Pricing";
 import Footer from "../components/HomePage/Sections/Footer";
-
+import "../style/landingpage.css";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
