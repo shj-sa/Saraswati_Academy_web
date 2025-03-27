@@ -1,5 +1,5 @@
 import React from "react";
-import LoginBlock from "../components/Login/LoginBlock";
+// import LoginBlock from "../components/Login/LoginBlock";
 import "../assets/sideimage.svg";
 
 const Information = () => {

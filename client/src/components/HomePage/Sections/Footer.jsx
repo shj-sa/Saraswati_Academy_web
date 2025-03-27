@@ -99,7 +99,7 @@ export default function Footer() {
 
         {/* Contact Section */}
         <div className="mb-8 text-center">
-          <h4 className="text-lg font-semibold text-gray-300">📞 Contact Us</h4>
+          <h4 className="text-lg font-semibold text-gray-300">Contact Us</h4>
           <p className="text-gray-400 flex items-center justify-center gap-2">
             <Phone className="w-5 h-5 text-yellow-400" /> +91 98765 43210
           </p>
