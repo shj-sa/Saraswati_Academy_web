@@ -7,6 +7,7 @@ import Testimonials from "../components/HomePage/Sections/Testimonials";
 import Pricing from "../components/HomePage/Sections/Pricing";
 import Footer from "../components/HomePage/Sections/Footer";
 import "../style/landingpage.css";
+import KnowYourFounder from "../components/HomePage/Sections/KnowAboutFounder";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -20,6 +21,9 @@ const LandingPage = () => {
         </section>
         <section>
           <HowItWorks />
+        </section>
+        <section>
+          <KnowYourFounder />
         </section>
         <section id="courses">
           <DemoGallery />
