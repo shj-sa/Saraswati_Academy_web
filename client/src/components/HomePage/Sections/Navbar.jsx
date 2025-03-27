@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Call to Action Button */}
         <Link
-          to="/join"
+          to="/login"
           className="hidden md:inline-block px-6 py-3 text-white rounded-md bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 transition transform hover:scale-105"
         >
           Join Now

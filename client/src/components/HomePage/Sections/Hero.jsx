@@ -69,7 +69,7 @@ function ImageSlider() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <Link
-                  to="#home"
+                  to="/login"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 transition-transform transform hover:scale-105"
                 >
                   Enroll Now <ArrowRight className="w-5 h-5 ml-3" />
