@@ -69,7 +69,7 @@ function ImageSlider() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <Link
-                  to="/admissions"
+                  to="#home"
                   className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 transition-transform transform hover:scale-105"
                 >
                   Enroll Now <ArrowRight className="w-5 h-5 ml-3" />
@@ -83,13 +83,13 @@ function ImageSlider() {
       {/* Custom Navigation Buttons */}
       <button
         onClick={() => sliderRef.current.slickPrev()}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full hover:bg-opacity-70 transition"
       >
         <ChevronLeft size={32} />
       </button>
       <button
         onClick={() => sliderRef.current.slickNext()}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2  text-white p-3 rounded-full hover:bg-opacity-70 transition"
       >
         <ChevronRight size={32} />
       </button>
