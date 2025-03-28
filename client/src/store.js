@@ -1,9 +1,9 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // Uses localStorage
-import userReducer from "./Store/userSlice";
-import ImageSlice from "./Store/imageSlice";
-import darkLightSlice from "./Store/darkLightMode";
+import userReducer from "./store/userSlice";
+import ImageSlice from "./store/imageSlice";
+import darkLightSlice from "./store/darkLightMode";
 
 // ✅ Configure Persistence for Select Reducers
 const persistConfig = {
@@ -29,7 +29,7 @@ const rootReducer = combineReducers({
 // Wrap rootReducer with persistReducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// ✅ Configure Store with Middleware
+// ✅ Configure store with Middleware
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>

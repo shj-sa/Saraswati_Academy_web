@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import AuthService from '../../scripts/API.Login';
-import { useDispatch, useSelector } from 'react-redux';
-import { loginSuccess } from '../../Store/userSlice';
-import { Eye, EyeOff } from 'lucide-react';
-import { PasswordVerifier } from '../../scripts/Validator';
+import { useState } from "react";
+import AuthService from "../../scripts/API.Login";
+import { useDispatch, useSelector } from "react-redux";
+import { loginSuccess } from "../../store/userSlice";
+import { Eye, EyeOff } from "lucide-react";
+import { PasswordVerifier } from "../../scripts/Validator";
 
 const ConfirmPassword = (props) => {
   const dispatch = useDispatch();
@@ -28,15 +28,15 @@ const ConfirmPassword = (props) => {
   return (
     <div className="bottom">
       <div className={`container flex flex-col text-left px-2`}>
-        <label className={`head-info ${mode ? 'dark-mode' : ''}`}>
+        <label className={`head-info ${mode ? "dark-mode" : ""}`}>
           New Password*
         </label>
         <div className="relative">
           <input
             className={`input-detail ${
-              !PasswordVerifier(password) ? 'border-red-500' : ''
+              !PasswordVerifier(password) ? "border-red-500" : ""
             }`}
-            type={showPasswordNew ? 'text' : 'password'}
+            type={showPasswordNew ? "text" : "password"}
             name="PASSWORD"
             value={password}
             onChange={(e) => {
@@ -63,15 +63,15 @@ const ConfirmPassword = (props) => {
       </div>
 
       <div className="flex flex-col text-left px-2">
-        <label className={`head-info ${mode ? 'dark-mode' : ''}`}>
+        <label className={`head-info ${mode ? "dark-mode" : ""}`}>
           Confirm Password*
         </label>
         <div className="relative">
           <input
             className={`input-detail ${
-              !isPasswordsMatch ? 'border-red-500' : ''
+              !isPasswordsMatch ? "border-red-500" : ""
             }`}
-            type={showPasswordConfirm ? 'text' : 'password'}
+            type={showPasswordConfirm ? "text" : "password"}
             name="CPASSWORD"
             value={confirmPassword}
             onChange={(e) => {
@@ -103,10 +103,10 @@ const ConfirmPassword = (props) => {
             if (isPasswordsMatch) {
               API.confirmPasswordChange({ ...props, setRegister: setRegister });
             } else {
-              setMsg('Passwords do not match');
+              setMsg("Passwords do not match");
             }
           } else {
-            setMsg('Password is not strong enough');
+            setMsg("Password is not strong enough");
           }
         }}
       >

@@ -3,7 +3,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
+const Mongostore = require("connect-mongo");
 const http = require("http");
 // Load environment variables
 require("dotenv").config();
@@ -30,7 +30,7 @@ app.use(
       secure: process.env.NODE_ENV === "production",
       sameSite: "none",
     }, // Set to true if using HTTPS in production
-    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URL }), // Use MongoDB for sessions
+    store: Mongostore.create({ mongoUrl: process.env.MONGODB_URL }), // Use MongoDB for sessions
   })
 );
 app.use(passport.initialize());

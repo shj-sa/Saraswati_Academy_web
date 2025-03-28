@@ -29,7 +29,7 @@ const LoginBlock = ({ setRegister }) => {
   const getHeading = () => {
     switch (signupLog) {
       case 1:
-        return "Sign In";
+        return "Register";
       case 2:
         return "OTP Verification";
       case 3:
@@ -74,7 +74,7 @@ const LoginBlock = ({ setRegister }) => {
           className="text-xl font-bold absolute left-9 top-1"
           style={{ fontFamily: "unset" }}
         >
-          Evolution
+          Saraswati Academy
         </span>
       </div>
 
@@ -136,9 +136,9 @@ const LoginBlock = ({ setRegister }) => {
           </>
         ) : (
           <>
-            <span>Create an account</span>
+            <span>Enroll</span>
             <span onClick={() => Update(1)} className="link-page">
-              Sign Up
+              Register
             </span>
 
             {signupLog !== 3 && (
@@ -154,29 +154,36 @@ const LoginBlock = ({ setRegister }) => {
       </div>
 
       {/* OR section */}
-      <div
-        className={`flex flex-row px-5 orsection ${mode ? "dark-mode" : ""}`}
-      >
-        <hr className="line" /> OR <hr className="line" />
-      </div>
+      {signupLog != 1 ? (
+        <>
+          <div
+            className={`flex flex-row px-5 orsection ${
+              mode ? "dark-mode" : ""
+            }`}
+          >
+            <hr className="line" /> OR <hr className="line" />
+          </div>
 
-      {/* Social login buttons */}
-      <div className="special-login">
-        <button
-          className="google-signin-button"
-          onClick={() => {
-            window.open(
-              `${import.meta.env.VITE_REACT_APP_BACKWEB}${
-                import.meta.env.VITE_REACT_APP_GOOGLE
-              }`,
-              "_self"
-            );
-          }}
-        >
-          <img src={icon.google} alt="Google logo" />
-          <span>Sign in with Google</span>
-        </button>
-      </div>
+          <div className="special-login">
+            <button
+              className="google-signin-button"
+              onClick={() => {
+                window.open(
+                  `${import.meta.env.VITE_REACT_APP_BACKWEB}${
+                    import.meta.env.VITE_REACT_APP_GOOGLE
+                  }`,
+                  "_self"
+                );
+              }}
+            >
+              <img src={icon.google} alt="Google logo" />
+              <span>Sign in with Google</span>
+            </button>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
