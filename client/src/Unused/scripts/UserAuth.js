@@ -1,5 +1,5 @@
-import axios from 'axios';
-import server from '../server.json';
+import axios from "axios";
+import server from "../../server.json";
 
 export const UserVerify = async () => {
   let BACKWEB = import.meta.env.VITE_REACT_APP_BACKWEB;
@@ -7,9 +7,9 @@ export const UserVerify = async () => {
   try {
     const response = await axios.get(`${BACKWEB}${server.Auth.verify}`, {
       headers: {
-        Accept: 'application/json',
+        Accept: "application/json",
       },
-      mode: 'cors',
+      mode: "cors",
       withCredentials: true,
     });
 

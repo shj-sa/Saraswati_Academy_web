@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import AuthService from '../../scripts/API.Login';
-import { useSelector } from 'react-redux';
-import { Eye, EyeOff } from 'lucide-react';
-import { EmailVerifier, PasswordVerifier } from '../../scripts/Validator';
+import { useState } from "react";
+import AuthService from "../../scripts/API.Login";
+import { useSelector } from "react-redux";
+import { Eye, EyeOff } from "lucide-react";
+import { EmailVerifier, PasswordVerifier } from "../../scripts/Validator";
 const Signup = (props) => {
   let WEB = import.meta.env.VITE_REACT_APP_BACKWEB;
   const [showPassword, setShowPassword] = useState(false);
-  const [msg, setMsg] = useState('');
+  const [msg, setMsg] = useState("");
 
   const handleChange = (e) => {
     props.setValue({
@@ -22,7 +22,7 @@ const Signup = (props) => {
   return (
     <div className="bottom">
       <div className={`container flex flex-col text-left px-2`}>
-        <div className={`head-info ${mode ? 'dark-mode' : ''}`}>Email*</div>
+        <div className={`head-info ${mode ? "dark-mode" : ""}`}>Email*</div>
         <input
           className="input-detail"
           name="EMAIL"
@@ -34,11 +34,11 @@ const Signup = (props) => {
         )}
       </div>
       <div className="flex flex-col px-2 text-left ">
-        <div className={`head-info ${mode ? 'dark-mode' : ''}`}>Password*</div>
+        <div className={`head-info ${mode ? "dark-mode" : ""}`}>Password*</div>
         <div className="relative">
           <input
             className="input-detail"
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             name="PASSWORD"
             value={props.value.PASSWORD}
             onChange={handleChange}
@@ -62,17 +62,17 @@ const Signup = (props) => {
         className="enterdetail btn"
         onClick={() => {
           if (!isEmailValid && props.value.EMAIL.trim().length > 0) {
-            setMsg('Invalid Email');
+            setMsg("Invalid Email");
             return;
           }
           if (!isPasswordValid) {
-            setMsg('Weak Password');
+            setMsg("Weak Password");
             return;
           }
           API.signup(props);
         }}
       >
-        Signup
+        Register
       </button>
       {msg && (
         <div className="mt-2 text-base text-center text-red-500 msg">{msg}</div>

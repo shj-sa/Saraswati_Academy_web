@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
-import LoginBlock from "../components/Login/LoginBlock";
-import aImage from "../assets/a.jpeg";
-import bImage from "../assets/b.jpeg";
-import cImage from "../assets/c.jpeg";
-import dImage from "../assets/d.jpeg";
-import eImage from "../assets/e.jpeg";
-
-const images = [aImage, bImage, cImage, dImage, eImage];
+import LoginBlock from "./components/Login/LoginBlock";
+const images = [];
 
 const AcademyInfo = () => {
   return (

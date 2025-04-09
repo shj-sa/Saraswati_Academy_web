@@ -1,5 +1,5 @@
 import axios from "axios";
-import server from "../server.json";
+import server from "../../server.json";
 import { persistor } from "../store"; // Import persistor
 
 class AuthService {

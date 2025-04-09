@@ -5,7 +5,7 @@ import userReducer from "./store/userSlice";
 import ImageSlice from "./store/imageSlice";
 import darkLightSlice from "./store/darkLightMode";
 
-// ✅ Configure Persistence for Select Reducers
+//  Configure Persistence for Select Reducers
 const persistConfig = {
   key: "root",
   storage,
@@ -29,7 +29,7 @@ const rootReducer = combineReducers({
 // Wrap rootReducer with persistReducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// ✅ Configure store with Middleware
+// Configure store with Middleware
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
@@ -38,7 +38,7 @@ export const store = configureStore({
     }),
 });
 
-// ✅ Persistor for Rehydration
+// Persistor for Rehydration
 export const persistor = persistStore(store);
 persistor.flush().then(() => {
   console.log("Persisted store loaded");

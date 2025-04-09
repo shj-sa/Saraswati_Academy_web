@@ -34,9 +34,9 @@ const Sidebar = () => {
         <Link to="/schedule" className="p-2 hover:bg-gray-700 rounded">
           📅 Schedule
         </Link>
-        <Link to="/create-quiz" className="p-2 hover:bg-gray-700 rounded">
+        {/* <Link to="/create-quiz" className="p-2 hover:bg-gray-700 rounded">
           📝 Create Quiz
-        </Link>
+        </Link> */}
         <Link to="/upload-file" className="p-2 hover:bg-gray-700 rounded">
           📂 Upload File
         </Link>

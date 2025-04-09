@@ -38,6 +38,10 @@ const UploadFile = () => {
     }, 2000);
   };
 
+  const handleDriveUpload = () => {
+    window.open("https://drive.google.com/drive/u/0/my-drive", "_blank");
+  };
+
   const renderPreview = React.useMemo(() => {
     if (!selectedFile) return null;
     const fileType = selectedFile.type;
@@ -117,6 +121,12 @@ const UploadFile = () => {
             className="mt-4 sm:mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200"
           >
             Upload
+          </button>
+          <button
+            onClick={handleDriveUpload}
+            className="mt-4 sm:mt-6 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-200"
+          >
+            📂 Upload from Google Drive
           </button>
           {uploadStatus && (
             <p className="mt-4 text-gray-700 font-semibold text-sm sm:text-base">

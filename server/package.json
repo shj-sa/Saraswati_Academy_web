@@ -5,8 +5,8 @@
   "repository": "https://github.com/Nishant040305/Saraswati_Academy.git",
   "author": "Nishant Mohan",
   "license": "MIT",
-  "scripts":{
-    "release":"standard-release"
+  "scripts": {
+    "release": "standard-release"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
