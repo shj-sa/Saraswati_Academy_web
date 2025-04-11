@@ -1,14 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const session = require("express-session");
-const Mongostore = require("connect-mongo");
 const http = require("http");
 // Load environment variables
 require("dotenv").config();
-// Connect to database
-const db = require("./db/mongoose");
 
 // Create express app and add middlewares
 const app = express();
@@ -29,14 +25,12 @@ app.use(
     cookie: {
       secure: process.env.NODE_ENV === "production",
       sameSite: "none",
-    }, // Set to true if using HTTPS in production
-    store: Mongostore.create({ mongoUrl: process.env.MONGODB_URL }), // Use MongoDB for sessions
+    },
   })
 );
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.json());
-app.use(cookieParser());
 
 // Middleware for error
 app.use((err, req, res, next) => {
