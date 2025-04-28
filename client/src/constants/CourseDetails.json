@@ -1,0 +1,98 @@
+{
+  "program1": {
+    "title": "Language Enrichment Program",
+    "courses": {
+      "beginners": {
+        "title": "Beginners Hindi",
+        "content": [
+          "Hindi alphabet guide",
+          "Hindi counting 1-100",
+          "Essential colours to learn in Hindi",
+          "How to tell the time in Hindi",
+          "Learn Hindi months and days of the week",
+          "Learn directions in Hindi",
+          "Greet and introduce yourself in Hindi",
+          "Hindi chanting"
+        ]
+      },
+      "intermediate": {
+        "title": "Intermediate Hindi",
+        "content": [
+          "Spell out Hindi words",
+          "Be aware and use Hindi writing system",
+          "Understand Hindi matras and start reading",
+          "Greet and introduce yourself and others",
+          "Talk about interests and hobbies",
+          "Basic Hindi grammar"
+        ]
+      },
+      "advanced": {
+        "title": "Advanced Hindi",
+        "content": [
+          "Reading and comprehension of passages and stories",
+          "Describe daily routine",
+          "Talk about travelling and holidays",
+          "Express hesitation and uncertainty",
+          "Grammar in depth"
+        ]
+      }
+    }
+  },
+  "program2": {
+    "title": "MOE Based Curriculum",
+    "courses": {
+      "p1p6": {
+        "title": "P1-P6",
+        "content": [
+          "Basic Hindi",
+          "Grammar",
+          "Sentence formation",
+          "Picture description",
+          "Picture composition",
+          "Paper solving tricks"
+        ]
+      },
+      "olevel": {
+        "title": "Sec. - O-level",
+        "content": [
+          "Advanced grammar concepts",
+          "Essay writing",
+          "Comprehension skills",
+          "Oral expression",
+          "Exam preparation strategies"
+        ]
+      },
+      "other": {
+        "title": "Other Board Curriculum",
+        "content": [
+          "CBSE",
+          "ICSE",
+          "IGHC"
+        ]
+      }
+    }
+  },
+  "program3": {
+    "title": "Conversational Classes",
+    "courses": {
+      "kids": {
+        "title": "Kids",
+        "content": [
+          "Age-appropriate vocabulary building",
+          "Interactive learning through games",
+          "Basic conversation practice",
+          "Cultural exposure through stories"
+        ]
+      },
+      "adults": {
+        "title": "Adults",
+        "content": [
+          "Discussion about topics",
+          "Express possible conditions and their results",
+          "Express agreement and disagreement",
+          "Practical conversational skills for daily use"
+        ]
+      }
+    }
+  }
+}

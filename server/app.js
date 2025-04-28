@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal Server error");
 });
 
-const routes = require("./routes");
+const routes = require("./routes/routes");
 app.use("/api", routes);
 
 // Test routes

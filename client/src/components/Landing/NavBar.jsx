@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import logoImage from "../../assets/images/Logo_background_less.png";
 import FrontPageData from "../../constants/FrontPage.json";
 import PhoneIcon from "../../lib/PhoneIcon";
+import CourseDropdownItem from "../ui/Courses";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,28 +54,39 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden space-x-8 md:flex">
           <li>
-            <a href="#home" className="hover:text-yellow-400 transition">
+            <a href="/" className="hover:text-yellow-400 transition">
               Home
             </a>
           </li>
-          <li>
-            <a href="#about" className="hover:text-yellow-400 transition">
-              Courses
-            </a>
+          <li className="relative group">
+            <CourseDropdownItem></CourseDropdownItem>
           </li>
           <li>
-            <a href="#courses" className="hover:text-yellow-400 transition">
+            <a
+              href="/testimonials"
+              className="hover:text-yellow-400 transition"
+            >
               Testimonials
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-yellow-400 transition">
+            <a href="/contact" className="hover:text-yellow-400 transition">
               Contact Us
             </a>
           </li>
           <li>
-            <a href="#resources" className="hover:text-yellow-400 transition">
+            <a href="/resources" className="hover:text-yellow-400 transition">
               Resources
+            </a>
+          </li>
+          <li>
+            <a href="/media" className="hover:text-yellow-400 transition">
+              Media Coverage
+            </a>
+          </li>
+          <li>
+            <a href="/hiring" className="hover:text-yellow-400 transition">
+              Join Us
             </a>
           </li>
         </ul>

@@ -1,5 +1,12 @@
-import founderImage from "../../assets/images/founder.png";
+import founderImage from "../../assets/images/image.webp";
+import { useState } from "react";
+import EnquiryForm from "../../lib/EnquieryForm";
 const IndianLanguageLearningHero = () => {
+  const [showEnquiry, setShowEnquiry] = useState(false);
+
+  const toggleEnquiry = () => {
+    setShowEnquiry(!showEnquiry);
+  };
   return (
     <div className="flex flex-col lg:flex-row items-start justify-center px-4 lg:px-16 py-10 gap-10">
       {/* Text Section */}
@@ -43,12 +50,13 @@ const IndianLanguageLearningHero = () => {
         <div className="flex flex-col sm:flex-row gap-4">
           <button
             type="button"
+            onClick={toggleEnquiry}
             className="bg-primary text-amber-500 text-[20px] font-medium px-6 py-3 rounded-full shadow-sm border-0"
           >
             Enquire Now
           </button>
           <a
-            href="#similar-Courses"
+            href="#why-us"
             className="text-[#4B2AAD] text-[20px] font-medium px-6 py-3 rounded-full shadow-sm"
             style={{ backgroundColor: "#F6F6F6" }}
           >
@@ -64,9 +72,22 @@ const IndianLanguageLearningHero = () => {
           alt="Learn an Indian Language Online"
           width={600}
           height={450}
-          className="rounded shadow-md"
+          className="rounded "
         />
       </div>
+      {/* Modal Overlay */}
+      {showEnquiry && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          {/* Dark overlay */}
+          <div
+            className="fixed inset-0 bg-black transition-opacity"
+            style={{ opacity: 0.5 }}
+          ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <EnquiryForm onClose={toggleEnquiry} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

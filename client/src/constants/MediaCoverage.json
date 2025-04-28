@@ -1,0 +1,92 @@
+{
+    "mediaCoverage": [
+      {
+        "id": 1,
+        "title": "Featured in Tech Today",
+        "date": "2025-02-15",
+        "source": "Tech Today Magazine",
+        "image": "/api/placeholder/400/240",
+        "content": "**Our institute** has been recognized for its innovative approach to language education.\n\n> *\"With an emphasis on practical usage, cultural immersion, and personalized learning paths, the institute is setting new benchmarks in the education sector,\"* said the editorial team at Tech Today.\n\nKey highlights:\n\n- **Specialized Hindi curriculum** tailored to individual student needs\n- **Interactive teaching techniques** combining modern and traditional methods\n- **Focus on cultural fluency** along with language mastery\n\n[Read full article](https://example.com/article1)",
+        "link": "https://example.com/article1"
+      },
+      {
+        "id": 2,
+        "title": "Language Learning Breakthrough",
+        "date": "2025-03-10",
+        "source": "Education Innovations",
+        "image": "/api/placeholder/400/240",
+        "content": "The teaching methodology at **our institute** has introduced a **breakthrough approach** in language acquisition, receiving widespread acclaim.\n\n**Innovations include:**\n\n- **Gamified learning modules** to sustain motivation\n- **AI-based assessment tools** to track real-time progress\n- **Live cultural events** integrated into the curriculum\n\n*Education Innovations* praises our commitment to making language education accessible, effective, and deeply engaging.\n\n[Discover how we're reshaping education](https://example.com/article2)",
+        "link": "https://example.com/article2"
+      },
+      {
+        "id": 3,
+        "title": "Transforming Language Education",
+        "date": "2025-04-01",
+        "source": "Learning Weekly",
+        "image": "/api/placeholder/400/240",
+        "content": "Analysts from *Learning Weekly* are recognizing **our institute's** dynamic role in transforming traditional language education.\n\n\"*The institute's emphasis on conversational fluency, combined with cultural appreciation, is creating a generation of truly bilingual learners,*\" notes their report.\n\nRecent achievements:\n\n- **Student satisfaction rates** over 98%\n- **Increased enrollment** by 35% year-over-year\n- **Expansion into three new regions** within Singapore\n\n> _\"A model worth replicating in other educational contexts.\"_\n\n[Full coverage available here](https://example.com/article3)",
+        "link": "https://example.com/article3"
+      },
+      {
+        "id": 4,
+        "title": "Pioneering Language Tech Integration",
+        "date": "2025-05-15",
+        "source": "EdTech Global",
+        "image": "/api/placeholder/400/240",
+        "content": "**Our institute** has been featured in *EdTech Global* for successfully integrating technology with traditional language learning methods.\n\nHighlights of our EdTech initiatives:\n\n- Deployment of **AI-powered pronunciation correction tools**\n- Introduction of **virtual classrooms** for remote learners\n- Launch of a **mobile app** with over 10,000 downloads within 3 months\n\n> _\"Blending heritage with high-tech innovation, this institute sets a new global standard.\"_\n\n[Explore the full feature](https://example.com/article4)",
+        "link": "https://example.com/article4"
+      },
+      {
+        "id": 5,
+        "title": "Spotlight on Cultural Literacy",
+        "date": "2025-06-05",
+        "source": "Culture Connect",
+        "image": "/api/placeholder/400/240",
+        "content": "*Culture Connect* praised our focus on **cultural literacy** as a fundamental part of language learning.\n\nOur unique programs include:\n\n- **Storytelling sessions** featuring traditional Indian folklore\n- **Festivals and cultural immersion events**\n- **Hindi drama workshops** for youth and adults\n\n> _\"Language is more than words—it's a window into a people's soul. This institute opens that window wide.\"_\n\n[Learn about our cultural programs](https://example.com/article5)",
+        "link": "https://example.com/article5"
+      }
+    ],
+    "achievements": [
+      {
+        "id": 1,
+        "title": "Education Excellence Award 2025",
+        "date": "2025-01-20",
+        "organization": "Language Education Council",
+        "image": "/api/placeholder/400/240",
+        "content": "**Awarded for:**\n\n- Excellence in **curriculum design**\n- Innovative **teaching methodology**\n- Commitment to **student success and inclusion**\n\nOur institute was honored at the annual Education Excellence Gala held in Singapore, celebrating our contribution towards making Hindi learning a rewarding and transformative experience for learners of all ages."
+      },
+      {
+        "id": 2,
+        "title": "Cultural Bridge Award",
+        "date": "2025-03-22",
+        "organization": "International Cultural Association",
+        "image": "/api/placeholder/400/240",
+        "content": "We are proud recipients of the **Cultural Bridge Award**, presented by the *International Cultural Association*.\n\n**Award highlights:**\n\n- Strengthening ties between **Singaporean** and **Indian** communities\n- Hosting **over 50 cultural exchange events** in 2024 alone\n- Publishing a **bilingual children's storybook series** to promote early cultural understanding\n\n> _\"The institute serves as a vibrant hub where language and culture unite.\"_"
+      },
+      {
+        "id": 3,
+        "title": "Top 10 Language Institutes",
+        "date": "2025-02-05",
+        "organization": "Education Excellence",
+        "image": "/api/placeholder/400/240",
+        "content": "Rated among the **Top 10 Language Institutes** of 2025 by *Education Excellence*, after rigorous evaluation based on:\n\n- **Student performance metrics**\n- **Innovative classroom practices**\n- **Community outreach efforts**\n\nOur approach to holistic education places strong emphasis on **practical communication**, **cultural knowledge**, and **student well-being**."
+      },
+      {
+        "id": 4,
+        "title": "Best Curriculum Innovation Award",
+        "date": "2025-04-15",
+        "organization": "Global Language Awards",
+        "image": "/api/placeholder/400/240",
+        "content": "Our institute received the **Best Curriculum Innovation Award** for creating a dynamic, flexible syllabus that adapts to students' needs.\n\nThe new curriculum emphasizes:\n\n- **Conversational fluency** from the first lesson\n- **Real-world tasks** instead of rote memorization\n- **Cross-cultural communication skills**\n\n> _\"An exemplary model of progressive language education,\"_ said the judging panel."
+      },
+      {
+        "id": 5,
+        "title": "Excellence in Online Learning",
+        "date": "2025-05-01",
+        "organization": "Digital Learning Forum",
+        "image": "/api/placeholder/400/240",
+        "content": "**Recognized for outstanding performance** in adapting to digital education trends, our online Hindi programs have achieved an **enrollment growth of 120%** in just one year.\n\n**Achievements include:**\n\n- Launch of **on-demand video courses**\n- Integration of **AI-driven progress tracking**\n- **Global student base** across 15+ countries\n\nWe are proud to set new standards for language learning in a connected world."
+      }
+    ]
+  }
+  
