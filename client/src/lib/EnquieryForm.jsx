@@ -4,6 +4,7 @@ import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
+import axios from "axios";
 import {
   Select,
   SelectTrigger,
@@ -14,7 +15,7 @@ import {
 } from "../components/ui/select";
 import PhoneNumber from "../components/ui/PhoneNoInput";
 import { X } from "lucide-react"; // Import X icon
-
+import server from "../server.json";
 const courseLabels = {
   "beginners-hindi": "Beginners Hindi",
   "intermediate-hindi": "Intermediate Hindi",
@@ -30,7 +31,7 @@ const EnquiryForm = ({ onClose }) => {
     name: "",
     email: "",
     phone: "",
-    courses: "",
+    course: "",
     note: "",
   });
 
@@ -44,24 +45,47 @@ const EnquiryForm = ({ onClose }) => {
   const handleCourseChange = (value) => {
     setForm({
       ...form,
-      courses: value,
+      course: value,
     });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", form);
   };
 
   const handleReset = () => {
     setForm({
       name: "",
       email: "",
-      phone: "",
-      courses: "",
+      contact: "",
+      course: "",
       note: "",
     });
     onClose();
+  };
+
+  const handleSubmit = async (e) => {
+    console.log("Hello");
+
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}${server.Enquiry}`,
+        form,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200 || response.status === 201) {
+        console.log("Submitted");
+        handleReset(); // Reset form and close if needed
+        alert("Enquiry submitted successfully. We'll get back to you soon.");
+      } else {
+        console.error("Server Error:", response.data);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Network or Server Error:", error);
+      alert("Network error. Please check your connection and try again.");
+    }
   };
 
   return (
@@ -100,17 +124,17 @@ const EnquiryForm = ({ onClose }) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
+            <Label htmlFor="contact">Phone Number</Label>
             <PhoneNumber
-              setNumber={(number) => setForm({ ...form, phone: number })}
+              setNumber={(number) => setForm({ ...form, contact: number })}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="courses">Select a Course</Label>
-            <Select value={form.courses} onValueChange={handleCourseChange}>
+            <Label htmlFor="course">Select a Course</Label>
+            <Select value={form.course} onValueChange={handleCourseChange}>
               <SelectTrigger className="w-full">
-                {form.courses ? courseLabels[form.courses] : "Select a course"}
+                {form.course ? courseLabels[form.course] : "Select a course"}
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
@@ -153,7 +177,7 @@ const EnquiryForm = ({ onClose }) => {
             />
           </div>
 
-          <Button className="w-full" onClick={handleSubmit}>
+          <Button className="w-full" onClick={() => handleSubmit()}>
             Submit Enquiry
           </Button>
         </CardContent>

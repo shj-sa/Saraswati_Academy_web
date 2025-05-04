@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ChevronDown, Check } from "lucide-react";
 import Wrapper from "../../containers/Wrapper";
 import courseContent from "../../constants/CourseDetails.json";
+import CallbackSection from "../ui/CallbackComp";
 const CoursesPage = () => {
   // State to track which sections are expanded
   const [expanded, setExpanded] = useState({
@@ -307,7 +308,7 @@ const CoursesPage = () => {
 
                 <div className="mt-8 text-center">
                   <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-sm">
-                    Enroll in this Course
+                    Have a Query
                   </button>
                 </div>
               </div>
@@ -315,6 +316,7 @@ const CoursesPage = () => {
           </div>
         </div>
       </div>
+      <CallbackSection></CallbackSection>
     </Wrapper>
   );
 };

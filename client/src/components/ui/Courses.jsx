@@ -7,7 +7,7 @@ const CourseDropdownItem = () => {
       {/* Trigger button with indicator */}
       <a
         href="/courses"
-        className="flex items-center hover:text-yellow-500 transition py-2 px-4 text-white font-medium"
+        className="flex items-center hover:text-yellow-500 transition text-white font-medium"
       >
         Courses
         <ChevronDown

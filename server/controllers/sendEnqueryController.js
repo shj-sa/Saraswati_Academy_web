@@ -1,12 +1,12 @@
-const { sendEnquiryEmail } = require("../emails/sendEnquiryEmail");
 const {
   sendCustomerResponseEmail,
-} = require("../emails/sendCustomerResponseEmail");
-
+  sendEnquiryEmail,
+} = require("../services/EmailService");
 const sendEnquiry = async (req, res) => {
   const { name, contact, email, course, note } = req.body;
-
+  console.log(req.body);
   // Basic validation
+  console.log(name, contact, email, course);
   if (!name || !contact || !email || !course) {
     return res.status(400).json({
       success: false,
@@ -17,7 +17,6 @@ const sendEnquiry = async (req, res) => {
 
   // Simple email & phone format check (can use better validators like Joi if needed)
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^[0-9]{10,15}$/;
 
   if (!emailRegex.test(email)) {
     return res.status(400).json({
@@ -26,12 +25,12 @@ const sendEnquiry = async (req, res) => {
     });
   }
 
-  if (!phoneRegex.test(contact)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid contact number format.",
-    });
-  }
+  // if (!phoneRegex.test(contact)) {
+  //   return res.status(400).json({
+  //     success: false,
+  //     message: "Invalid contact number format.",
+  //   });
+  // }
 
   try {
     const enquiryData = { name, contact, email, course, note: note || "N/A" };

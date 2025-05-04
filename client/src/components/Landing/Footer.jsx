@@ -29,24 +29,19 @@ const footerLinks = [
     title: "Resources",
     links: ["Online Classes", "Live Sessions", "Blog", "FAQs", "Support"],
   },
-  {
-    title: "Company",
-    links: [
-      "About Us",
-      "Our Teachers",
-      "Success Stories",
-      "Contact",
-      "Careers",
-    ],
-  },
+  // {
+  //   title: "Company",
+  //   links: [
+  //     "About Us",
+  //     "Our Teachers",
+  //     "Success Stories",
+  //     "Contact",
+  //     "Careers",
+  //   ],
+  // },
   {
     title: "Legal",
-    links: [
-      "Privacy Policy",
-      "Terms & Conditions",
-      "Refund Policy",
-      "Cookies Policy",
-    ],
+    links: ["Terms & Conditions"],
   },
 ];
 

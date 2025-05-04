@@ -89,6 +89,12 @@ const testimonials = [
     imageSrc: "/Images/Testimonials/Telugu/alok-mishra.webp",
     review: `Saraswati Hindi Jagat has made Hindi learning fun for my child! They focus on building a strong foundation for students and provide useful tips for exams. The teachers are highly knowledgeable and make the lessons interesting. I'm so happy with my son’s progress!`,
   },
+  {
+    name: "Nikhil Arora",
+    profession: "Parent",
+    imageSrc: "/Images/Testimonials/Telugu/nikhil-arora.webp",
+    review: `My daughter has been attending Saraswati Hindi Jagat for the past year, and I’m very impressed with her progress. She struggled with Hindi earlier, but the teachers took a patient approach to teach her and made sure she understood every lesson. She's now consistently scoring better in her exams.`,
+  },
 ];
 
 export default testimonials;
