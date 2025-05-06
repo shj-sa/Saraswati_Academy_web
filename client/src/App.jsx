@@ -8,22 +8,30 @@ import CoursesPage from "./components/courses/main";
 import Resource from "./containers/Resources";
 import MediaSection from "./containers/MediaSection";
 import HiringSection from "./containers/HiringSection";
-import TermsAndConditionsPopup from "./components/LegalMatters/termsandconditions";
+import NavigationBar from "./constants/Navigation_Bar.json";
 function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage></LandingPage>}></Route>
-      <Route path="/enquiry" element={<EnquiryPage></EnquiryPage>}></Route>
-      <Route path="/contact" element={<ContactSection />}></Route>
-      <Route path="/testimonials" element={<TestimonialsPage />}></Route>
-      <Route path="/courses" element={<CoursesPage />}></Route>
-      <Route path="/resources" element={<Resource />}></Route>
-      <Route path="/media" element={<MediaSection />}></Route>
-      <Route path="/hiring" element={<HiringSection />}></Route>
-      <Route
-        path="/terms"
-        element={<TermsAndConditionsPopup></TermsAndConditionsPopup>}
-      ></Route>
+      {NavigationBar.Contact.present && (
+        <Route path="/contact" element={<ContactSection />}></Route>
+      )}
+      {NavigationBar.Testimonials.present && (
+        <Route path="/testimonials" element={<TestimonialsPage />}></Route>
+      )}
+      {NavigationBar.Courses.present && (
+        <Route path="/courses" element={<CoursesPage />}></Route>
+      )}
+      {NavigationBar.Resources.present && (
+        <Route path="/resources" element={<Resource />}></Route>
+      )}
+      {NavigationBar.Media.present && (
+        <Route path="/media" element={<MediaSection />}></Route>
+      )}
+      {NavigationBar.JoinUs.present && (
+        <Route path="/hiring" element={<HiringSection />}></Route>
+      )}
+      <Route path="/*" element={<LandingPage />}></Route>
     </Routes>
   );
 }
