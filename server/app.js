@@ -17,19 +17,6 @@ app.use(
     credentials: true,
   })
 );
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET, // Replace with a secure key or an environment variable
-    resave: false, // Don't save session if unmodified
-    saveUninitialized: true, // Doesn't save empty sessions
-    cookie: {
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "none",
-    },
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(express.json());
 
 // Middleware for error
