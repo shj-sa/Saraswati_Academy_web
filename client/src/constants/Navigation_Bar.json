@@ -8,11 +8,11 @@
         "present":true
     },
     "Testimonials":{
-        "title":"Testimonials Page",
+        "title":"Testimonials",
         "present":true
     },
     "Contact":{
-        "title":"Contact Us",
+        "title":"Contact",
         "present":true
     },
     "Resources":{
@@ -24,7 +24,7 @@
         "present":true
     },
     "JoinUs":{
-        "title":"Join Us",
+        "title":"Join",
         "present":true
     }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight, Navigation } from "lucide-react";
 import logoImage from "../../assets/images/Logo.png";
@@ -11,6 +11,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
+
+  // constant size in px
+  const size = 1700;
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -97,7 +109,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden space-x-8 lg:flex">
+        <ul className={`${windowWidth >= size ? "flex space-x-8" : "hidden"}`}>
           {NavigationBar.Home.present && (
             <li>
               <a href="/" className="hover:text-yellow-400 transition">
@@ -151,13 +163,15 @@ const Navbar = () => {
         </ul>
 
         {/* Phone Button - Desktop */}
-        <div className="hidden lg:block">
+        <div className={`${windowWidth >= size ? "block" : "hidden"}`}>
           <PhoneButton />
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="block lg:hidden focus:outline-none"
+          className={`${
+            windowWidth < size ? "block" : "hidden"
+          } focus:outline-none`}
           onClick={toggleMenu}
         >
           {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -165,9 +179,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {windowWidth <= size && isOpen && (
         <div
-          className={`lg:hidden absolute top-full left-0 w-full bg-black pl-10 bg-opacity-95 overflow-hidden transition-all duration-400 ease-in-out transform ${
+          className={`absolute top-full left-0 w-full bg-black pl-10 bg-opacity-95 overflow-hidden transition-all duration-400 ease-in-out transform ${
             menuVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-2"
