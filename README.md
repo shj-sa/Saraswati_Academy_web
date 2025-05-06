@@ -1,5 +1,13 @@
 # 📁 Project File Guide
 
+constant File: address 
+### Client > src > constants
+
+how to add images in the file 
+### import img from "../assets/images/<filename.png/jpg/webp.. etc>"
+or
+### "https://image.com/xyz"
+
 This guide explains the purpose of each file, what constants or data they contain, and how non-coders can safely update them.
 
 ## ✅ whyUs.js
@@ -59,7 +67,7 @@ To add a new resource:
   "image": "image-link",
   "downloadCount": 0,
   "level": "Beginner/Intermediate/Advanced",
-  "link": "download-link"
+  "link": "share link of drive make sure to make it public"
 }
 ```
 
@@ -86,6 +94,32 @@ To add a new resource:
 **How to update:** Change article text, titles, dates, sources, and links. To add a new article, copy an existing block and adjust the content.
 
 Content inside content uses markdown (**bold**, *italic*, etc.)
+
+```json
+{
+    "mediaCoverage": [
+      {
+        "id": 1,
+        "title": "Featured in Tech Today",
+        "date": "2025-02-15",
+        "source": "Tech Today Magazine",
+        "image": "/api/placeholder/400/240",
+        "content": "**Our institute** along with language mastery\n\n[Read full article](https://example.com/article1)",
+        "link": "https://example.com/article1"
+      }],
+  "achievements": [
+      {
+        "id": 1,
+        "title": "Education Excellence Award 2025",
+        "date": "2025-01-20",
+        "organization": "Language Education Council",
+        "image": "/api/placeholder/400/240",
+        "content": "**Awarded for:**\n\n- Excellence learners of all ages."
+      }]
+}
+```
+
+to add new add like the above format consider the proper use of comma
 
 ## ✅ Keysellingpoints.js
 
