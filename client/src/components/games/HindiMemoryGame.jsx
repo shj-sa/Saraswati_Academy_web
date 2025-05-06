@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { RefreshCw } from "lucide-react";
 import words from "../../constants/HindiMemoryGame.json";
+
 /**
  * MemoryGame - A card matching game for Hindi vocabulary with proper 3D flip animation
+ * Optimized for mobile screens
  */
 const HindiMemoryGame = () => {
   // Sample Hindi words with meanings and transliteration
@@ -170,32 +172,32 @@ const HindiMemoryGame = () => {
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-xl font-bold mb-4 text-center">Hindi Memory Match</h2>
-      <p className="text-sm text-gray-600 mb-4 text-center">
+    <div className="w-full bg-white rounded-lg shadow-md p-3">
+      <h2 className="text-lg font-bold mb-2 text-center">Hindi Memory Match</h2>
+      <p className="text-xs text-gray-600 mb-2 text-center">
         Match Hindi words with their English translations
       </p>
 
-      <div className="flex justify-between items-center mb-4">
-        <div className="text-sm">
+      <div className="flex justify-between items-center mb-2">
+        <div className="text-xs">
           <span className="font-semibold">Moves:</span> {moves}
         </div>
-        <div className="text-sm">
+        <div className="text-xs">
           <span className="font-semibold">Matches:</span> {matchedPairs}/
           {difficulty === "easy" ? 4 : difficulty === "medium" ? 6 : 8}
         </div>
         <button
           onClick={startNewGame}
-          className="flex items-center text-sm px-3 py-1 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-md"
+          className="flex items-center text-xs px-2 py-1 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-md"
         >
-          <RefreshCw size={16} className="mr-1" /> Reset
+          <RefreshCw size={12} className="mr-1" /> Reset
         </button>
       </div>
 
-      <div className="flex justify-center gap-2 mb-4">
+      <div className="flex justify-center gap-2 mb-2">
         <button
           onClick={() => setDifficulty("easy")}
-          className={`px-3 py-1 text-xs rounded-md ${
+          className={`px-2 py-1 text-xs rounded-md ${
             difficulty === "easy"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 hover:bg-gray-300"
@@ -205,7 +207,7 @@ const HindiMemoryGame = () => {
         </button>
         <button
           onClick={() => setDifficulty("medium")}
-          className={`px-3 py-1 text-xs rounded-md ${
+          className={`px-2 py-1 text-xs rounded-md ${
             difficulty === "medium"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 hover:bg-gray-300"
@@ -215,7 +217,7 @@ const HindiMemoryGame = () => {
         </button>
         <button
           onClick={() => setDifficulty("hard")}
-          className={`px-3 py-1 text-xs rounded-md ${
+          className={`px-2 py-1 text-xs rounded-md ${
             difficulty === "hard"
               ? "bg-blue-600 text-white"
               : "bg-gray-200 hover:bg-gray-300"
@@ -225,9 +227,9 @@ const HindiMemoryGame = () => {
         </button>
       </div>
 
-      {/* Card grid with perspective for 3D effect */}
+      {/* Card grid with perspective for 3D effect - Adjusted for mobile */}
       <div
-        className={`grid gap-3 mb-4 ${
+        className={`grid gap-2 mb-2 ${
           difficulty === "easy"
             ? "grid-cols-2 sm:grid-cols-4"
             : difficulty === "medium"
@@ -238,7 +240,7 @@ const HindiMemoryGame = () => {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="h-32 perspective-500"
+            className="h-20 perspective-500"
             style={{ perspective: "1000px" }}
           >
             <div
@@ -257,15 +259,15 @@ const HindiMemoryGame = () => {
                 className="absolute w-full h-full bg-blue-500 hover:bg-blue-600 rounded-lg flex items-center justify-center backface-hidden"
                 style={{ backfaceVisibility: "hidden" }}
               >
-                <span className="text-white text-3xl font-bold">?</span>
+                <span className="text-white text-xl font-bold">?</span>
               </div>
 
               {/* Back face (content) */}
               <div
-                className={`absolute w-full h-full rounded-lg flex items-center justify-center p-2 backface-hidden rotate-y-180 ${
+                className={`absolute w-full h-full rounded-lg flex items-center justify-center p-1 backface-hidden rotate-y-180 ${
                   card.matched
-                    ? "bg-green-100 border-2 border-green-500"
-                    : "bg-white border-2 border-blue-500"
+                    ? "bg-green-100 border border-green-500"
+                    : "bg-white border border-blue-500"
                 }`}
                 style={{
                   backfaceVisibility: "hidden",
@@ -275,19 +277,19 @@ const HindiMemoryGame = () => {
                 <div className="flex flex-col items-center justify-center text-center">
                   <span
                     className={`font-bold ${
-                      card.type === "hindi" ? "text-2xl mb-1" : "text-lg"
+                      card.type === "hindi" ? "text-lg mb-0.5" : "text-sm"
                     }`}
                   >
                     {card.content}
                   </span>
                   {card.type === "hindi" && (
                     <>
-                      <span className="text-sm text-gray-600">
+                      <span className="text-xs text-gray-600">
                         {card.transliteration}
                       </span>
                       <button
                         onClick={(e) => speakWord(card.content, e)}
-                        className="mt-1 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded-full"
+                        className="mt-0.5 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-1.5 py-0.5 rounded-full"
                       >
                         🔊
                       </button>
@@ -301,12 +303,12 @@ const HindiMemoryGame = () => {
       </div>
 
       {gameComplete && (
-        <div className="bg-green-100 text-green-800 p-3 rounded-md text-center">
-          <p className="font-bold">Congratulations! 🎉</p>
-          <p className="text-sm">You completed the game in {moves} moves.</p>
+        <div className="bg-green-100 text-green-800 p-2 rounded-md text-center">
+          <p className="font-bold text-sm">Congratulations! 🎉</p>
+          <p className="text-xs">You completed the game in {moves} moves.</p>
           <button
             onClick={startNewGame}
-            className="mt-2 px-4 py-2 bg-green-200 hover:bg-green-300 text-green-800 rounded-md text-sm font-medium"
+            className="mt-1 px-3 py-1 bg-green-200 hover:bg-green-300 text-green-800 rounded-md text-xs font-medium"
           >
             Play Again
           </button>

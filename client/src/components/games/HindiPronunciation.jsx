@@ -13,6 +13,13 @@ const HindiPronunciation = () => {
 
   const currentPhrase = phrases[currentPhraseIndex];
 
+  const speakWord = (text, event) => {
+    event.stopPropagation(); // Prevent card flip when clicking the speak button
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "hi-IN";
+    window.speechSynthesis.speak(utterance);
+  };
+
   const playAudio = (audioUrl) => {
     if (!audioUrl) {
       alert("No audio available for this phrase.");
@@ -70,7 +77,13 @@ const HindiPronunciation = () => {
 
       <div className="flex justify-center mb-4">
         <button
-          onClick={() => playAudio(currentPhrase.audioUrl)}
+          onClick={(e) => {
+            if (currentPhrase.status === "word") {
+              speakWord(currentPhrase.hindi, e);
+            } else {
+              playAudio(currentPhrase.audioUrl);
+            }
+          }}
           className="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700"
         >
           <Volume2 size={24} className="mr-2" />

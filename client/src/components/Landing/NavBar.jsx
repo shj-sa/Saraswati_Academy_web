@@ -11,7 +11,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
-
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
   const PhoneButton = () => (
     <a
       href={`tel:${contact.phoneNumbers[0]}`}
