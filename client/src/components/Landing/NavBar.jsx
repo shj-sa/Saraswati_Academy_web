@@ -13,8 +13,8 @@ const Navbar = () => {
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
 
   // constant size in px
-  const size = 1700;
-
+  // const size = 1051; // for change
+  const size = 1600;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
