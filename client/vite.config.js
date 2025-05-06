@@ -10,7 +10,7 @@ export default defineConfig({
       theme: {
         extend: {
           screens: {
-            lg: "1550px", // Custom breakpoint at 1051px
+            lg: "1700px", // Custom breakpoint at 1051px
           },
         },
       },
