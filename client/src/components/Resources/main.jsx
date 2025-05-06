@@ -251,7 +251,7 @@ export default function HindiResourcesPage() {
                   exercises.
                 </p>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center">
+                  <div className="flex items-center flex-col">
                     <div className="flex text-yellow-400">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <svg
@@ -269,9 +269,7 @@ export default function HindiResourcesPage() {
                   </div>
                   <button
                     className="bg-purple-700 hover:bg-purple-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                    onClick={() =>
-                      handleDownload("Complete Hindi Learning Kit")
-                    }
+                    onClick={() => handleDownload(resource.FolderUrl)}
                   >
                     <svg
                       className="w-4 h-4 mr-2"
