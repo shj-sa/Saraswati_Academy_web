@@ -3,6 +3,7 @@ import { ChevronDown, Check } from "lucide-react";
 import Wrapper from "../../containers/Wrapper";
 import courseContent from "../../constants/CourseDetails.json";
 import CallbackSection from "../ui/CallbackComp";
+import EnquiryForm from "../../lib/EnquieryForm";
 const CoursesPage = () => {
   // State to track which sections are expanded
   const [expanded, setExpanded] = useState({
@@ -32,7 +33,11 @@ const CoursesPage = () => {
       course,
     });
   };
+  const [showEnquiry, setShowEnquiry] = useState(false);
 
+  const toggleEnquiry = () => {
+    setShowEnquiry(!showEnquiry);
+  };
   return (
     <Wrapper>
       <div className="container mx-auto px-4 py-12 max-w-7xl">
@@ -307,7 +312,10 @@ const CoursesPage = () => {
                 </div>
 
                 <div className="mt-8 text-center">
-                  <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-sm">
+                  <button
+                    onClick={() => toggleEnquiry()}
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-sm"
+                  >
                     Have a Query
                   </button>
                 </div>
@@ -317,6 +325,19 @@ const CoursesPage = () => {
         </div>
       </div>
       <CallbackSection></CallbackSection>
+      {/* Modal Overlay */}
+      {showEnquiry && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          {/* Dark overlay */}
+          <div
+            className="fixed inset-0 bg-black transition-opacity"
+            style={{ opacity: 0.5 }}
+          ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <EnquiryForm onClose={toggleEnquiry} />
+          </div>
+        </div>
+      )}
     </Wrapper>
   );
 };

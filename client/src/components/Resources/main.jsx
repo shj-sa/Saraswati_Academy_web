@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import CallbackSection from "../ui/CallbackComp";
 import resourcesData from "../../constants/Resources.json";
+import HindiGameSection from "../games/main";
+import logo from "../../assets/images/Logo.png";
+import { convertDriveLink } from "../../lib/convertShareToDownload";
 export default function HindiResourcesPage() {
   const [categories, setCategories] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
@@ -14,14 +17,20 @@ export default function HindiResourcesPage() {
       setCategories(resourcesData.categories);
     }, 500);
   }, []);
-
-  const handleDownload = (resourceTitle) => {
-    setDownloadedResource(resourceTitle);
-    setShowDownloadMessage(true);
-    setTimeout(() => {
-      setShowDownloadMessage(false);
-    }, 3000);
-  };
+  function handleDownload(shareLink) {
+    const downloadLink = convertDriveLink(shareLink);
+    console.log(downloadLink);
+    if (downloadLink) {
+      const a = document.createElement("a");
+      a.href = downloadLink;
+      a.download = ""; // optional: this hints the browser to download
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } else {
+      alert("Invalid Google Drive share link");
+    }
+  }
 
   const filteredCategories = categories
     .map((category) => {
@@ -83,7 +92,9 @@ export default function HindiResourcesPage() {
           </div>
 
           <div className="flex items-center gap-2 w-full md:w-auto justify-center md:justify-end">
-            <span className="text-sm font-medium">Filter by level:</span>
+            <span className="hidden md:block  text-sm font-medium">
+              Filter by level:
+            </span>
             <div className="flex gap-2">
               <button
                 className={`px-3 py-1 rounded-md text-sm ${
@@ -186,7 +197,7 @@ export default function HindiResourcesPage() {
                         </span>
                         <button
                           className="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                          onClick={() => handleDownload(resource.title)}
+                          onClick={() => handleDownload(resource.link)}
                         >
                           <svg
                             className="w-4 h-4 mr-2"
@@ -213,7 +224,7 @@ export default function HindiResourcesPage() {
           ))
         )}
       </main>
-
+      <HindiGameSection></HindiGameSection>
       {/* Featured Resource Banner */}
       <div className="bg-purple-100 py-8 px-6 mb-8">
         <div className="max-w-6xl mx-auto">
@@ -221,7 +232,7 @@ export default function HindiResourcesPage() {
             <div className="md:flex">
               <div className="md:w-1/3">
                 <img
-                  src="/api/placeholder/600/400"
+                  src={logo}
                   alt="Featured Hindi Learning Kit"
                   className="w-full h-full object-cover object-center"
                 />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
-import logoImage from "../../assets/images/Logo_background_less.png";
+import logoImage from "../../assets/images/Logo.png";
 import FrontPageData from "../../constants/FrontPage.json";
 import PhoneIcon from "../../lib/PhoneIcon";
 import CourseDropdownItem from "../ui/Courses";

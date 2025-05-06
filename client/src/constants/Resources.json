@@ -1,98 +1,106 @@
 {
-    "categories": [
-      {
-        "id": "revision-booklets",
-        "title": "Revision Booklets",
-        "description": "Comprehensive materials to strengthen your Hindi knowledge",
-        "resources": [
-          {
-            "id": "beginner-booklet",
-            "title": "Beginner Hindi Revision Booklet",
-            "description": "Essential Hindi basics with vocabulary and simple sentence structures",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 1254,
-            "level": "Beginner"
-          },
-          {
-            "id": "intermediate-booklet",
-            "title": "Intermediate Hindi Revision Booklet",
-            "description": "Advanced grammar, expanded vocabulary, and conversation practice",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 987,
-            "level": "Intermediate"
-          },
-          {
-            "id": "advanced-booklet",
-            "title": "Advanced Hindi Revision Booklet",
-            "description": "Complex sentence structures, idiomatic expressions, and literary Hindi",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 763,
-            "level": "Advanced"
-          }
-        ]
-      },
-      {
-        "id": "grammar-fundamentals",
-        "title": "Grammar Fundamentals",
-        "description": "Master the building blocks of Hindi language",
-        "resources": [
-          {
-            "id": "hindi-vowels",
-            "title": "Hindi Vowels (स्वर)",
-            "description": "Comprehensive guide to all Hindi vowels with pronunciation tips",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 2345,
-            "level": "Beginner"
-          },
-          {
-            "id": "hindi-consonants",
-            "title": "Hindi Consonants (व्यंजन)",
-            "description": "Learn all Hindi consonants with proper writing techniques",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 1876,
-            "level": "Beginner"
-          },
-          {
-            "id": "hindi-matras",
-            "title": "Hindi Matras (मात्राएँ)",
-            "description": "Master all Hindi vowel symbols that modify consonant sounds",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 1543,
-            "level": "Beginner"
-          }
-        ]
-      },
-      {
-        "id": "practice-materials",
-        "title": "Practice Materials",
-        "description": "Strengthen your Hindi skills with interactive exercises",
-        "resources": [
-          {
-            "id": "conversation-scripts",
-            "title": "Everyday Conversation Scripts",
-            "description": "Common dialogues for practical Hindi usage in daily situations",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 1132,
-            "level": "All Levels"
-          },
-          {
-            "id": "writing-exercises",
-            "title": "Hindi Writing Exercises",
-            "description": "Structured worksheets to improve your Hindi writing skills",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 876,
-            "level": "All Levels"
-          },
-          {
-            "id": "reading-passages",
-            "title": "Hindi Reading Passages",
-            "description": "Graduated reading materials from simple to complex texts",
-            "image": "/api/placeholder/300/200",
-            "downloadCount": 943,
-            "level": "All Levels"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "categories": [
+    {
+      "id": "revision-booklets",
+      "title": "Revision Booklets",
+      "description": "Comprehensive materials to strengthen your Hindi knowledge",
+      "resources": [
+        {
+          "id": "beginner-booklet",
+          "title": "Beginner Hindi Revision Booklet",
+          "description": "Essential Hindi basics with vocabulary and simple sentence structures",
+          "image": "https://images.pexels.com/photos/31864392/pexels-photo-31864392.jpeg",
+          "downloadCount": 1254,
+          "level": "Beginner",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "intermediate-booklet",
+          "title": "Intermediate Hindi Revision Booklet",
+          "description": "Advanced grammar, expanded vocabulary, and conversation practice",
+          "image": "https://images.pexels.com/photos/18012463/pexels-photo-18012463.jpeg",
+          "downloadCount": 987,
+          "level": "Intermediate",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "advanced-booklet",
+          "title": "Advanced Hindi Revision Booklet",
+          "description": "Complex sentence structures, idiomatic expressions, and literary Hindi",
+          "image": "https://images.pexels.com/photos/16461275/pexels-photo-16461275.jpeg",
+          "downloadCount": 763,
+          "level": "Advanced",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "id": "grammar-fundamentals",
+      "title": "Grammar Fundamentals",
+      "description": "Master the building blocks of Hindi language",
+      "resources": [
+        {
+          "id": "hindi-vowels",
+          "title": "Hindi Vowels (स्वर)",
+          "description": "Comprehensive guide to all Hindi vowels with pronunciation tips",
+          "image": "https://images.pexels.com/photos/46274/pexels-photo-46274.jpeg",
+          "downloadCount": 2345,
+          "level": "Beginner",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "hindi-consonants",
+          "title": "Hindi Consonants (व्यंजन)",
+          "description": "Learn all Hindi consonants with proper writing techniques",
+          "image": "https://cdn.pixabay.com/photo/2017/01/12/06/54/hindi-1973909_1280.png",
+          "downloadCount": 1876,
+          "level": "Beginner",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "hindi-matras",
+          "title": "Hindi Matras (मात्राएँ)",
+          "description": "Master all Hindi vowel symbols that modify consonant sounds",
+          "image": "https://images.pexels.com/photos/7744502/pexels-photo-7744502.jpeg",
+          "downloadCount": 1543,
+          "level": "Beginner",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "id": "practice-materials",
+      "title": "Practice Materials",
+      "description": "Strengthen your Hindi skills with interactive exercises",
+      "resources": [
+        {
+          "id": "conversation-scripts",
+          "title": "Everyday Conversation Scripts",
+          "description": "Common dialogues for practical Hindi usage in daily situations",
+          "image": "https://images.pexels.com/photos/3280559/pexels-photo-3280559.jpeg",
+          "downloadCount": 1132,
+          "level": "All Levels",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "writing-exercises",
+          "title": "Hindi Writing Exercises",
+          "description": "Structured worksheets to improve your Hindi writing skills",
+          "image": "https://images.pexels.com/photos/10078824/pexels-photo-10078824.jpeg",
+          "downloadCount": 876,
+          "level": "All Levels",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        },
+        {
+          "id": "reading-passages",
+          "title": "Hindi Reading Passages",
+          "description": "Graduated reading materials from simple to complex texts",
+          "image": "https://images.pexels.com/photos/10638208/pexels-photo-10638208.jpeg",
+          "downloadCount": 943,
+          "level": "All Levels",
+          "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
+        }
+      ]
+    }
+  ]
+}

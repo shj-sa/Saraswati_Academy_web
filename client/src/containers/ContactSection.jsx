@@ -55,12 +55,6 @@ const ContactSection = () => {
                 </div>
               ))}
             </ContactCard>
-
-            <ContactCard icon={<Home size={24} />} title="Address">
-              {contactDetails.address.map((line, index) => (
-                <div key={index}>{line}</div>
-              ))}
-            </ContactCard>
           </div>
         </div>
       </div>

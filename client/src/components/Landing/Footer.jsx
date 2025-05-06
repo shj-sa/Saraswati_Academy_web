@@ -5,13 +5,18 @@ import {
   Instagram,
   Phone,
   Mail,
+  Youtube,
+  Linkedin,
 } from "lucide-react";
-
+import Social from "../../constants/socialLinks.json";
+import contact from "../../constants/contactUs.json";
 const socialLinks = [
   { icon: Github, href: "https://github.com/Nishant040305", id: "github" },
-  { icon: Twitter, href: "/twitter", id: "twitter" },
-  { icon: Facebook, href: "/facebook", id: "facebook" },
-  { icon: Instagram, href: "/instagram", id: "instagram" },
+  { icon: Twitter, href: Social.twitter, id: "twitter" },
+  { icon: Facebook, href: Social.facebook, id: "facebook" },
+  { icon: Instagram, href: Social.instagram, id: "instagram" },
+  { icon: Youtube, href: Social.youtube, id: "youtube" },
+  { icon: Linkedin, href: Social.linkedin, id: "linkedin" },
 ];
 
 const footerLinks = [
@@ -29,16 +34,6 @@ const footerLinks = [
     title: "Resources",
     links: ["Online Classes", "Live Sessions", "Blog", "FAQs", "Support"],
   },
-  // {
-  //   title: "Company",
-  //   links: [
-  //     "About Us",
-  //     "Our Teachers",
-  //     "Success Stories",
-  //     "Contact",
-  //     "Careers",
-  //   ],
-  // },
   {
     title: "Legal",
     links: ["Terms & Conditions"],
@@ -96,11 +91,11 @@ export default function Footer() {
         <div className="mb-8 text-center">
           <h4 className="text-lg font-semibold text-gray-300">Contact Us</h4>
           <p className="text-gray-400 flex items-center justify-center gap-2">
-            <Phone className="w-5 h-5 text-yellow-400" /> +91 98765 43210
+            <Phone className="w-5 h-5 text-yellow-400" />{" "}
+            {contact.phoneNumbers[0]}
           </p>
           <p className="text-gray-400 flex items-center justify-center gap-2 mt-2">
-            <Mail className="w-5 h-5 text-yellow-400" />{" "}
-            support@saraswatiacademy.com
+            <Mail className="w-5 h-5 text-yellow-400" /> {contact.emails[0]}
           </p>
         </div>
 
