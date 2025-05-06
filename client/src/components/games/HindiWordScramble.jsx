@@ -1,74 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Shuffle, Check, X, RefreshCw, Volume2 } from "lucide-react";
-
+import words from "../../constants/HindiWordScramble.json";
 /**
  * HindiWordScramble - A word unscrambling game
  */
 const HindiWordScramble = () => {
   // Sample Hindi words with meanings, transliteration, and difficulty
-  const wordsList = [
-    {
-      hindi: "नमस्ते",
-      translation: "Hello",
-      transliteration: "Namaste",
-      difficulty: "easy",
-    },
-    {
-      hindi: "धन्यवाद",
-      translation: "Thank you",
-      transliteration: "Dhanyavaad",
-      difficulty: "medium",
-    },
-    {
-      hindi: "पानी",
-      translation: "Water",
-      transliteration: "Paani",
-      difficulty: "easy",
-    },
-    {
-      hindi: "खाना",
-      translation: "Food",
-      transliteration: "Khaana",
-      difficulty: "easy",
-    },
-    {
-      hindi: "स्कूल",
-      translation: "School",
-      transliteration: "School",
-      difficulty: "easy",
-    },
-    {
-      hindi: "किताब",
-      translation: "Book",
-      transliteration: "Kitaab",
-      difficulty: "easy",
-    },
-    {
-      hindi: "मित्र",
-      translation: "Friend",
-      transliteration: "Mitra",
-      difficulty: "medium",
-    },
-    {
-      hindi: "परिवार",
-      translation: "Family",
-      transliteration: "Parivaar",
-      difficulty: "medium",
-    },
-    {
-      hindi: "आसमान",
-      translation: "Sky",
-      transliteration: "Aasmaan",
-      difficulty: "medium",
-    },
-    {
-      hindi: "स्वतंत्रता",
-      translation: "Freedom",
-      transliteration: "Swatantrata",
-      difficulty: "hard",
-    },
-  ];
-
+  const wordsList = words.words;
   const [currentWord, setCurrentWord] = useState(null);
   const [scrambledTransliteration, setScrambledTransliteration] = useState("");
   const [userGuess, setUserGuess] = useState("");

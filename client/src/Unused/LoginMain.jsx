@@ -10,10 +10,10 @@ const AcademyInfo = () => {
     >
       <div className="text-center p-6 w-full max-w-2xl mx-auto">
         <h1 className="font-bold text-3xl md:text-4xl tracking-wide text-yellow-400 mb-4">
-          Welcome to Saraswati Academy
+          Welcome to Saraswati Hindi Jagat
         </h1>
         <p className="text-lg md:text-xl mb-6 px-4 leading-relaxed">
-          Saraswati Academy is dedicated to nurturing minds and empowering
+          Saraswati Hindi Jagat is dedicated to nurturing minds and empowering
           students with knowledge. Join us to embark on a journey of excellence
           and wisdom.
         </p>

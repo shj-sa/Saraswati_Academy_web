@@ -10,8 +10,10 @@ import {
 } from "lucide-react";
 import Social from "../../constants/socialLinks.json";
 import contact from "../../constants/contactUs.json";
+import TermsAndConditionsPopup from "../LegalMatters/termsandconditions";
+import PrivacyPolicyPopup from "../LegalMatters/PrivacyPolicy";
+import { useState } from "react";
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Nishant040305", id: "github" },
   { icon: Twitter, href: Social.twitter, id: "twitter" },
   { icon: Facebook, href: Social.facebook, id: "facebook" },
   { icon: Instagram, href: Social.instagram, id: "instagram" },
@@ -34,20 +36,17 @@ const footerLinks = [
     title: "Resources",
     links: ["Online Classes", "Live Sessions", "Blog", "FAQs", "Support"],
   },
-  {
-    title: "Legal",
-    links: ["Terms & Conditions"],
-  },
 ];
-
 export default function Footer() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [openPrivacy, setOpenPrivacy] = useState(false);
   return (
     <footer className="pt-12 pb-8 text-white bg-gray-900" id="contact">
       <div className="container px-4 mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center justify-between gap-6 mb-12 md:flex-row">
           <h3 className="text-3xl font-bold tracking-tight text-yellow-400">
-            Saraswati Academy
+            Saraswati Hindi Jagat
           </h3>
           <div className="flex gap-4">
             {socialLinks.map(({ icon: Icon, href, id }) => (
@@ -85,6 +84,27 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+          <div key="legal">
+            <h4 className="mb-4 text-lg font-semibold text-gray-300">Legal</h4>
+            <ul className="space-y-2">
+              <li key={`${"Terms & Conditions"}`}>
+                <div
+                  onClick={() => setIsOpen(true)}
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
+                  Terms & Conditions
+                </div>
+              </li>
+              <li key={`${"Privacy Policy"}`}>
+                <div
+                  onClick={() => setOpenPrivacy(true)}
+                  className="text-gray-400 transition-colors hover:text-white"
+                >
+                  Privacy Policy
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Contact Section */}
@@ -101,8 +121,9 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 border-t border-gray-700 md:flex-row">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Saraswati Academy. All rights reserved.
+          <p className="text-sm text-gray-400" style={{ fontStyle: "italic" }}>
+            © {new Date().getFullYear()} Saraswati Hindi Jagat - A Saraswati
+            Academy Enterprise. All rights reserved.
           </p>
           <p className="text-sm text-gray-400">
             Developed by{" "}
@@ -117,6 +138,31 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      {/* Modal Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          {/* Dark overlay */}
+          <div
+            className="fixed inset-0 bg-black transition-opacity"
+            style={{ opacity: 0.5 }}
+          ></div>
+          <div className="flex items-center justify-center min-h-screen text-black">
+            <TermsAndConditionsPopup setIsOpen={setIsOpen} />
+          </div>
+        </div>
+      )}
+      {openPrivacy && (
+        <div className="fixed inset-0 z-50 overflow-y-auto text-black">
+          {/* Dark overlay */}
+          <div
+            className="fixed inset-0 bg-black transition-opacity"
+            style={{ opacity: 0.5 }}
+          ></div>
+          <div className="flex items-center justify-center min-h-screen">
+            <PrivacyPolicyPopup setIsOpen={setOpenPrivacy} />
+          </div>
+        </div>
+      )}
     </footer>
   );
 }

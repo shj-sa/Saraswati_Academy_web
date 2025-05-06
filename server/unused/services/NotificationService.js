@@ -69,7 +69,7 @@ class NotificationService {
    */
   async notifyTeacher(teacher, classDetails) {
     const emailSubject = "Class Schedule Notification";
-    const emailBody = `Dear ${teacher.name},\n\nYou have a scheduled class:\n${classDetails}\n\nBest Regards,\nSaraswati Academy`;
+    const emailBody = `Dear ${teacher.name},\n\nYou have a scheduled class:\n${classDetails}\n\nBest Regards,\nSaraswati Hindi Jagat`;
 
     const smsMessage = `Hello ${teacher.name}, you have a class scheduled: ${classDetails}`;
 

@@ -1,0 +1,48 @@
+[
+    {
+      "hindi": "नमस्ते",
+      "transliteration": "namaste",
+      "translation": "Hello",
+      "audioUrl": "https://harrisburg.psu.edu/files/mp3/1828/2017/02/20/Hello_Hindi.mp3",
+      "source": "Penn State Harrisburg",
+      "voiceType": "Female (native Hindi)",
+      "notes": ""
+    },
+    {
+      "hindi": "आप कैसे हैं?",
+      "transliteration": "aap kaise hain?",
+      "translation": "How are you?",
+      "audioUrl": "https://harrisburg.psu.edu/files/mp3/1830/2017/02/20/Howareyou_Hindi.mp3",
+      "source": "Penn State Harrisburg",
+      "voiceType": "Female (native Hindi)",
+      "notes": ""
+    },
+    {
+      "hindi": "मेरा नाम ... है",
+      "transliteration": "mera naam ... hai",
+      "translation": "My name is ...",
+      "audioUrl": "",
+      "source": "WordHippo (phrase)",
+      "voiceType": "Computer TTS (Hindi)",
+      "notes": "Placeholder “…” indicates where a name goes"
+    },
+    {
+      "hindi": "धन्यवाद",
+      "transliteration": "dhanyavaad",
+      "translation": "Thank you",
+      "audioUrl": "https://harrisburg.psu.edu/files/mp3/1831/2017/02/20/Thankyou_Hindi.mp3",
+      "source": "Penn State Harrisburg",
+      "voiceType": "Female (native Hindi)",
+      "notes": ""
+    },
+    {
+      "hindi": "फिर मिलेंगे",
+      "transliteration": "phir milenge",
+      "translation": "See you again",
+      "audioUrl": "https://harrisburg.psu.edu/files/mp3/1832/2017/02/20/Goodbye_Hindi.mp3",
+      "source": "Penn State Harrisburg",
+      "voiceType": "Female (native Hindi)",
+      "notes": "Audio says “अलविदा, फिर मिलते हैं” (equivalent meaning)"
+    }
+  ]
+  

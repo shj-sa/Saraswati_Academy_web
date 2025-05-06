@@ -44,7 +44,7 @@ const sendOtpEmail = async (recipientEmail, otpCode) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: recipientEmail,
-      subject: "Your OTP Verification for Saraswati Academy",
+      subject: "Your OTP Verification for Saraswati Hindi Jagat",
       html: htmlTemplate,
     };
 
@@ -63,7 +63,7 @@ const sendPasswordRecoverEmail = async (recipientEmail, otpCode) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: recipientEmail,
-      subject: "Your Password Recovery OTP for Saraswati Academy",
+      subject: "Your Password Recovery OTP for Saraswati Hindi Jagat",
       html: htmlTemplate,
     };
 

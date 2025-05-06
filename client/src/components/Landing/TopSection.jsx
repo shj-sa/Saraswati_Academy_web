@@ -1,9 +1,12 @@
-import founderImage from "../../assets/images/image.webp";
+// import founderImage from "../../assets/images/image.webp";
 import { useState } from "react";
 import EnquiryForm from "../../lib/EnquieryForm";
+import Keysellingpoints from "../../constants/Keysellingpoints";
+import Images from "../../constants/KeyImage.js";
 const IndianLanguageLearningHero = () => {
   const [showEnquiry, setShowEnquiry] = useState(false);
-
+  const founderImage = Images.founder;
+  console.log(founderImage);
   const toggleEnquiry = () => {
     setShowEnquiry(!showEnquiry);
   };
@@ -12,19 +15,12 @@ const IndianLanguageLearningHero = () => {
       {/* Text Section */}
       <div className="lg:w-1/2 order-2 lg:order-1">
         <h1 className="text-3xl lg:text-4xl font-semibold text-start mb-6">
-          Learn an <span className="text-[#4B2AAD]">Indian Language</span>
+          Learn an <span className="text-[#4B2AAD]">Hindi Language</span>
           <span className="block"> anytime, anywhere </span>
         </h1>
 
         <div className="flex flex-wrap gap-3 mb-6">
-          {[
-            "1 : 1 Personal Coaching",
-            "Top Language Coaches",
-            "Flexible Timings",
-            "Study Material Access",
-            "Custom Learning Plans",
-            "Course Certificate",
-          ].map((item, idx) => (
+          {Keysellingpoints.map((item, idx) => (
             <div
               key={idx}
               className="flex items-center w-full sm:w-[48%] bg-white p-2 rounded shadow-sm"

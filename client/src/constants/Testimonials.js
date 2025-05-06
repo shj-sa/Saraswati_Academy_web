@@ -1,3 +1,4 @@
+// "../assets/images/Testimonials/filename.extension"
 const testimonials = [
   {
     name: "Nitu Balwani",

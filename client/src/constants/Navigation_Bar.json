@@ -1,0 +1,30 @@
+{
+    "Home":{
+        "title":"Home",
+        "present":true
+    },
+    "Courses":{
+        "title":"Courses",
+        "present":true
+    },
+    "Testimonials":{
+        "title":"Testimonials Page",
+        "present":true
+    },
+    "Contact":{
+        "title":"Contact Us",
+        "present":true
+    },
+    "Resources":{
+        "title":"Resources",
+        "present":true
+    },
+    "Media":{
+        "title":"Media Coverage",
+        "present":true
+    },
+    "JoinUs":{
+        "title":"Join Us",
+        "present":true
+    }
+}

@@ -1,57 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Shuffle, Check, X, RefreshCw, Volume2 } from "lucide-react";
-
+import { Volume2 } from "lucide-react";
+import data from "../../constants/HindiPronunciation.json";
 /**
  * HindiPronunciation - A pronunciation game with audio playback
  */
 const HindiPronunciation = () => {
   // Sample Hindi phrases with audio URLs (these would be replaced with actual audio files)
-  const phrases = [
-    {
-      hindi: "नमस्ते",
-      transliteration: "Namaste",
-      translation: "Hello",
-      audioUrl: "#", // Replace with actual audio URL
-    },
-    {
-      hindi: "आप कैसे हैं?",
-      transliteration: "Aap kaise hain?",
-      translation: "How are you?",
-      audioUrl: "#", // Replace with actual audio URL
-    },
-    {
-      hindi: "मेरा नाम ... है",
-      transliteration: "Mera naam ... hai",
-      translation: "My name is ...",
-      audioUrl: "#", // Replace with actual audio URL
-    },
-    {
-      hindi: "धन्यवाद",
-      transliteration: "Dhanyavaad",
-      translation: "Thank you",
-      audioUrl: "#", // Replace with actual audio URL
-    },
-    {
-      hindi: "फिर मिलेंगे",
-      transliteration: "Phir milenge",
-      translation: "See you again",
-      audioUrl: "#", // Replace with actual audio URL
-    },
-  ];
-
+  const phrases = data;
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [showTransliteration, setShowTransliteration] = useState(false);
   const [practiceCount, setPracticeCount] = useState(0);
 
   const currentPhrase = phrases[currentPhraseIndex];
 
-  const playAudio = () => {
-    // In a real implementation, this would play the audio file
-    // For now, we'll just increment the practice count
-    setPracticeCount(practiceCount + 1);
-    alert(
-      "In a real implementation, this would play audio of the Hindi phrase."
-    );
+  const playAudio = (audioUrl) => {
+    if (!audioUrl) {
+      alert("No audio available for this phrase.");
+      return;
+    }
+
+    const audio = new Audio(audioUrl);
+    audio.play().catch((error) => {
+      console.error("Audio playback failed:", error);
+      alert("Failed to play audio.");
+    });
   };
 
   const nextPhrase = () => {
@@ -98,7 +70,7 @@ const HindiPronunciation = () => {
 
       <div className="flex justify-center mb-4">
         <button
-          onClick={playAudio}
+          onClick={() => playAudio(currentPhrase.audioUrl)}
           className="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700"
         >
           <Volume2 size={24} className="mr-2" />

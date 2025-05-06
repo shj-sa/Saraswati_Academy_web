@@ -1,26 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { RefreshCw } from "lucide-react";
-
+import words from "../../constants/HindiMemoryGame.json";
 /**
  * MemoryGame - A card matching game for Hindi vocabulary with proper 3D flip animation
  */
 const HindiMemoryGame = () => {
   // Sample Hindi words with meanings and transliteration
-  const wordPairs = [
-    { hindi: "नमस्ते", translation: "Hello", transliteration: "Namaste" },
-    {
-      hindi: "धन्यवाद",
-      translation: "Thank you",
-      transliteration: "Dhanyavaad",
-    },
-    { hindi: "पानी", translation: "Water", transliteration: "Paani" },
-    { hindi: "खाना", translation: "Food", transliteration: "Khaana" },
-    { hindi: "एक", translation: "One", transliteration: "Ek" },
-    { hindi: "दो", translation: "Two", transliteration: "Do" },
-    { hindi: "तीन", translation: "Three", transliteration: "Teen" },
-    { hindi: "चार", translation: "Four", transliteration: "Chaar" },
-  ];
-
+  const wordPairs = words.words;
   // Create cards from word pairs (Hindi and English)
   const createCards = () => {
     const cards = [];
@@ -71,13 +57,22 @@ const HindiMemoryGame = () => {
   // Start a new game
   const startNewGame = () => {
     // Select a subset of word pairs based on difficulty
+    const shuffledPairs = [...wordPairs];
+    for (let i = shuffledPairs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledPairs[i], shuffledPairs[j]] = [
+        shuffledPairs[j],
+        shuffledPairs[i],
+      ];
+    }
     let gameWordPairs;
+    //shuffle wordPairs
     if (difficulty === "easy") {
-      gameWordPairs = wordPairs.slice(0, 4); // 4 pairs = 8 cards
+      gameWordPairs = shuffledPairs.slice(0, 4); // 4 pairs = 8 cards
     } else if (difficulty === "medium") {
-      gameWordPairs = wordPairs.slice(0, 6); // 6 pairs = 12 cards
+      gameWordPairs = shuffledPairs.slice(0, 6); // 6 pairs = 12 cards
     } else {
-      gameWordPairs = wordPairs; // All 8 pairs = 16 cards
+      gameWordPairs = shuffledPairs.slice(0, 8); // All 8 pairs = 16 cards
     }
 
     // Create and initialize cards

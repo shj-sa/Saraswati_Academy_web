@@ -55,7 +55,7 @@ const sendEnquiryEmail = async (enquiryData) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: process.env.CLIENT_EMAIL,
-      subject: `New Enquiry from ${enquiryData.name} - Saraswati Academy`,
+      subject: `New Enquiry from ${enquiryData.name} - Saraswati Hindi Jagat`,
       html: htmlTemplate,
     };
 
@@ -82,7 +82,7 @@ const sendCustomerResponseEmail = async (customerEmail, data) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: customerEmail,
-      subject: "Thank You for Your Enquiry - Saraswati Academy",
+      subject: "Thank You for Your Enquiry - Saraswati Hindi Jagat",
       html: htmlTemplate,
       attachments: [
         {

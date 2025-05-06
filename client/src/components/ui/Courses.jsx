@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
-
+import courseDetails from "../../constants/CourseDetails.json";
 const CourseDropdownItem = () => {
   return (
     <li className="relative group">
@@ -29,59 +29,24 @@ const CourseDropdownItem = () => {
             </h4>
 
             <ul className="space-y-4 text-sm">
-              {/* Language Enrichment Program */}
-              <li>
-                <div className="font-semibold text-gray-900 flex items-center mb-1">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                  Language Enrichment Program
-                </div>
-                <ul className="ml-4 space-y-1 text-gray-600">
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Beginners Hindi
-                  </li>
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Intermediate Hindi
-                  </li>
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Advanced Hindi
-                  </li>
-                </ul>
-              </li>
-
-              {/* MOE Based Curriculum */}
-              <li>
-                <div className="font-semibold text-gray-900 flex items-center mb-1">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                  MOE Based Curriculum
-                </div>
-                <ul className="ml-4 space-y-1 text-gray-600">
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • P1-P6
-                  </li>
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Sec.- O-level
-                  </li>
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Other Board Curriculum
-                  </li>
-                </ul>
-              </li>
-
-              {/* Conversational Classes */}
-              <li>
-                <div className="font-semibold text-gray-900 flex items-center mb-1">
-                  <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                  Conversational Classes
-                </div>
-                <ul className="ml-4 space-y-1 text-gray-600">
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Kids
-                  </li>
-                  <li className="hover:text-yellow-600 cursor-pointer transition-colors py-1">
-                    • Adults
-                  </li>
-                </ul>
-              </li>
+              {Object.values(courseDetails).map((program) => (
+                <li key={program.title}>
+                  <div className="font-semibold text-gray-900 flex items-center mb-1">
+                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                    {program.title}
+                  </div>
+                  <ul className="ml-4 space-y-1 text-gray-600">
+                    {Object.values(program.courses).map((course) => (
+                      <li
+                        key={course.title}
+                        className="hover:text-yellow-600 cursor-pointer transition-colors py-1"
+                      >
+                        • {course.title}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
             </ul>
           </div>
 

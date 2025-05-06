@@ -8,6 +8,7 @@ import CoursesPage from "./components/courses/main";
 import Resource from "./containers/Resources";
 import MediaSection from "./containers/MediaSection";
 import HiringSection from "./containers/HiringSection";
+import TermsAndConditionsPopup from "./components/LegalMatters/termsandconditions";
 function App() {
   return (
     <Routes>
@@ -19,6 +20,10 @@ function App() {
       <Route path="/resources" element={<Resource />}></Route>
       <Route path="/media" element={<MediaSection />}></Route>
       <Route path="/hiring" element={<HiringSection />}></Route>
+      <Route
+        path="/terms"
+        element={<TermsAndConditionsPopup></TermsAndConditionsPopup>}
+      ></Route>
     </Routes>
   );
 }

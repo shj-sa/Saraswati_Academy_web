@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Navigation } from "lucide-react";
 import logoImage from "../../assets/images/Logo.png";
-import FrontPageData from "../../constants/FrontPage.json";
 import PhoneIcon from "../../lib/PhoneIcon";
 import CourseDropdownItem from "../ui/Courses";
-
+import NavigationBar from "../../constants/Navigation_Bar.json";
+import CourseDetails from "../../constants/CourseDetails.json";
+import contact from "../../constants/contactUs.json";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
 
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
   const PhoneButton = () => (
-    <div
-      onClick={handleLinkClick}
-      className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 text-white rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:ring-2 hover:ring-orange-300 shadow-md cursor-pointer"
+    <a
+      href={`tel:${contact.phoneNumbers[0]}`}
+      className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 text-white rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 transition-all duration-300 ease-in-out transform hover:scale-105 hover:ring-2 hover:ring-orange-300 shadow-md cursor-pointer no-underline"
     >
       <PhoneIcon color="#1a1601" size={22} />
       <span className="font-semibold tracking-wide uppercase text-sm drop-shadow-sm">
-        {FrontPageData.phone}
+        {contact.phoneNumbers[0]}
       </span>
-    </div>
+    </a>
   );
 
   const toggleMenu = () => {
@@ -43,7 +40,6 @@ const Navbar = () => {
     setMobileCoursesOpen(!mobileCoursesOpen);
   };
 
-  // Mobile courses dropdown menu content
   const MobileCoursesDropdown = () => (
     <div
       className={`pl-4 mt-2 space-y-3 transition-all duration-300 ${
@@ -53,63 +49,28 @@ const Navbar = () => {
       }`}
     >
       <div className="border-l-2 border-yellow-500 pl-4">
-        {/* Language Enrichment Program */}
-        <div className="mb-3">
-          <div className="font-semibold text-yellow-400 flex items-center mb-1">
-            Language Enrichment Program
+        {Object.values(CourseDetails).map((program) => (
+          <div className="mb-3" key={program.title}>
+            <div className="font-semibold text-yellow-400 flex items-center mb-1">
+              {program.title}
+            </div>
+            <ul className="ml-2 space-y-2 text-gray-300">
+              {Object.values(program.courses).map((course) => (
+                <li
+                  key={course.title}
+                  className="hover:text-yellow-400 cursor-pointer transition-colors"
+                >
+                  • {course.title}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="ml-2 space-y-2 text-gray-300">
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Beginners Hindi
-            </li>
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Intermediate Hindi
-            </li>
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Advanced Hindi
-            </li>
-          </ul>
-        </div>
+        ))}
 
-        {/* MOE Based Curriculum */}
-        <div className="mb-3">
-          <div className="font-semibold text-yellow-400 flex items-center mb-1">
-            MOE Based Curriculum
-          </div>
-          <ul className="ml-2 space-y-2 text-gray-300">
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • P1-P6
-            </li>
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Sec.- O-level
-            </li>
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Other Board Curriculum
-            </li>
-          </ul>
-        </div>
-
-        {/* Conversational Classes */}
-        <div className="mb-2">
-          <div className="font-semibold text-yellow-400 flex items-center mb-1">
-            Conversational Classes
-          </div>
-          <ul className="ml-2 space-y-2 text-gray-300">
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Kids
-            </li>
-            <li className="hover:text-yellow-400 cursor-pointer transition-colors">
-              • Adults
-            </li>
-          </ul>
-        </div>
-
-        {/* View all courses link */}
         <div className="mt-3 text-center">
           <a
             href="/courses"
             className="text-yellow-400 hover:text-yellow-500 text-sm font-medium inline-flex items-center"
-            onClick={handleLinkClick}
           >
             View all courses <ChevronRight size={16} className="ml-1" />
           </a>
@@ -129,48 +90,62 @@ const Navbar = () => {
             className="w-12 h-12 md:w-16 md:h-16"
           />
           <div className="text-xl md:text-2xl font-bold tracking-tight text-transparent bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text">
-            Saraswati Academy
+            Saraswati Hindi Jagat
           </div>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden space-x-8 lg:flex">
-          <li>
-            <a href="/" className="hover:text-yellow-400 transition">
-              Home
-            </a>
-          </li>
-          <li className="relative group">
-            <CourseDropdownItem />
-          </li>
-          <li>
-            <a
-              href="/testimonials"
-              className="hover:text-yellow-400 transition"
-            >
-              Testimonials
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="hover:text-yellow-400 transition">
-              Contact Us
-            </a>
-          </li>
-          <li>
-            <a href="/resources" className="hover:text-yellow-400 transition">
-              Resources
-            </a>
-          </li>
-          <li>
-            <a href="/media" className="hover:text-yellow-400 transition">
-              Media Coverage
-            </a>
-          </li>
-          <li>
-            <a href="/hiring" className="hover:text-yellow-400 transition">
-              Join Us
-            </a>
-          </li>
+          {NavigationBar.Home.present && (
+            <li>
+              <a href="/" className="hover:text-yellow-400 transition">
+                {NavigationBar.Home.title}
+              </a>
+            </li>
+          )}
+          {NavigationBar.Courses.present && (
+            <li className="relative group">
+              <CourseDropdownItem />
+            </li>
+          )}
+          {NavigationBar.Testimonials.present && (
+            <li>
+              <a
+                href="/testimonials"
+                className="hover:text-yellow-400 transition"
+              >
+                {NavigationBar.Testimonials.title}
+              </a>
+            </li>
+          )}
+          {NavigationBar.Contact.present && (
+            <li>
+              <a href="/contact" className="hover:text-yellow-400 transition">
+                {NavigationBar.Contact.title}
+              </a>
+            </li>
+          )}
+          {NavigationBar.Resources.present && (
+            <li>
+              <a href="/resources" className="hover:text-yellow-400 transition">
+                Resources
+              </a>
+            </li>
+          )}
+          {NavigationBar.Media.present && (
+            <li>
+              <a href="/media" className="hover:text-yellow-400 transition">
+                Media Coverage
+              </a>
+            </li>
+          )}
+          {NavigationBar.JoinUs.present && (
+            <li>
+              <a href="/hiring" className="hover:text-yellow-400 transition">
+                Join Us
+              </a>
+            </li>
+          )}
         </ul>
 
         {/* Phone Button - Desktop */}
@@ -197,78 +172,92 @@ const Navbar = () => {
           }`}
         >
           <ul className="space-y-4 py-4 px-4 text-left">
-            <li>
-              <a
-                href="/"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              {/* Mobile Courses Dropdown Trigger */}
-              <a
-                href="#"
-                className="block text-lg hover:text-yellow-400 flex items-center justify-between"
-                onClick={toggleMobileCourses}
-              >
-                <span>Courses</span>
-                <ChevronDown
-                  size={16}
-                  className={`ml-1 transition-transform duration-300 ${
-                    mobileCoursesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </a>
-              {/* Mobile Courses Dropdown Content */}
-              <MobileCoursesDropdown />
-            </li>
-            <li>
-              <a
-                href="/testimonials"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="/resources"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Resources
-              </a>
-            </li>
-            <li>
-              <a
-                href="/media"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Media Coverage
-              </a>
-            </li>
-            <li>
-              <a
-                href="/hiring"
-                className="block text-lg hover:text-yellow-400"
-                onClick={handleLinkClick}
-              >
-                Join Us
-              </a>
-            </li>
+            {NavigationBar.Home.present && (
+              <li>
+                <a
+                  href="/"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.Home.title}
+                </a>
+              </li>
+            )}
+            {NavigationBar.Courses.present && (
+              <li>
+                {/* Mobile Courses Dropdown Trigger */}
+                <a
+                  href="#"
+                  className="block text-lg hover:text-yellow-400 flex items-center justify-between"
+                  onClick={toggleMobileCourses}
+                >
+                  <span>{NavigationBar.Courses.title}</span>
+                  <ChevronDown
+                    size={16}
+                    className={`ml-1 transition-transform duration-300 ${
+                      mobileCoursesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </a>
+                {/* Mobile Courses Dropdown Content */}
+                <MobileCoursesDropdown />
+              </li>
+            )}
+            {NavigationBar.Testimonials.present && (
+              <li>
+                <a
+                  href="/testimonials"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.Testimonials.title}
+                </a>
+              </li>
+            )}
+            {NavigationBar.Contact.present && (
+              <li>
+                <a
+                  href="/contact"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.Contact.title}
+                </a>
+              </li>
+            )}
+            {NavigationBar.Resources.present && (
+              <li>
+                <a
+                  href="/resources"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.Resources.title}
+                </a>
+              </li>
+            )}
+            {NavigationBar.Media.present && (
+              <li>
+                <a
+                  href="/media"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.Media.title}
+                </a>
+              </li>
+            )}
+            {NavigationBar.JoinUs.present && (
+              <li>
+                <a
+                  href="/hiring"
+                  className="block text-lg hover:text-yellow-400"
+                  onClick={handleLinkClick}
+                >
+                  {NavigationBar.JoinUs.title}
+                </a>
+              </li>
+            )}
 
             {/* Phone Button */}
             <div className="flex justify-start pt-2">

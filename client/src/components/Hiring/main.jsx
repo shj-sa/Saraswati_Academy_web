@@ -10,7 +10,7 @@ const HiringProcess = () => {
       {/* Header - Left aligned */}
       <div className="mb-12 relative z-10">
         <h2 className="text-yellow-500 text-2xl font-bold mb-1">
-          Saraswati Academy
+          Saraswati Hindi Jagat
         </h2>
         <h1 className="text-4xl font-bold">
           Hiring Process <span className="text-blue-500">Workflow</span>
@@ -395,7 +395,7 @@ const HiringProcess = () => {
       {/* Footer note */}
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500">
-          Saraswati Academy is an equal opportunity employer committed to
+          Saraswati Hindi Jagat is an equal opportunity employer committed to
           diversity and inclusion.
         </p>
       </div>

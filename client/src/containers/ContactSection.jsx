@@ -26,7 +26,7 @@ const ContactSection = () => {
         <p className="text-center text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
           The team at{" "}
           <a href="/" className="text-blue-600 underline font-medium">
-            Saraswati Academy
+            Saraswati Hindi Jagat
           </a>{" "}
           is dedicated to helping you learn Indian languages through
           personalized classes.
