@@ -168,10 +168,52 @@ answer: "Yes,\n we can reschedule the classes"
 **How to update:** Look for sections like:
 
 ```json
-"title": "Course Title",
-"description": "Course Description"
+{
+  "program1": {
+    "title": "Language Enrichment Program",
+    "courses": {
+      "beginners": {
+        "title": "Beginners Hindi",
+        "content": ["Content","Content",..]
+      },
+      "intermediate": {
+        "title": "Intermediate Hindi",
+        "content": ["points"]
+      },
+      "advanced": {
+        "title": "Advanced Hindi",
+        "content": []
+      }
+    }
+  },
+  "program2": {
+    "title": "MOE Based Curriculum",
+    "courses": {
+      "p1p6": {
+        "title": "P1-P6",
+        "content": ["Basic Hindi","Grammar"]
+      },
+      "olevel": {
+        "title": "Sec. - O-level",
+        "content": ["Advanced grammar concepts","Essay writing"]
+      },
+      "other": {
+        "title": "Other Board Curriculum",
+        "content": ["boards"]
+      }
+    }
+  },...}
 ```
+for new program5:{
+"title":"...",
+"courses"{list of courses..
+"course_name":{
+  tilte:"...",
+  content:[]
+}
+}
 
+}
 and edit the text.
 
 ## ✅ contactUs.json
