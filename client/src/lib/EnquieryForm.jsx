@@ -35,6 +35,7 @@ const EnquiryForm = ({ onClose }) => {
     course: "",
     note: "",
   });
+  const [loading, setLoading] = React.useState(false);
 
   const handleInputChange = (e) => {
     setForm({
@@ -61,33 +62,27 @@ const EnquiryForm = ({ onClose }) => {
     onClose();
   };
 
-  const handleSubmit = async (e) => {
-    console.log("Hello");
-
+  const handleSubmit = async () => {
+    setLoading(true);
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_REACT_APP_BASE_URL}${server.Enquiry}`,
         form,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        { headers: { "Content-Type": "application/json" } }
       );
 
       if (response.status === 200 || response.status === 201) {
-        console.log("Submitted");
-        handleReset(); // Reset form and close if needed
         toast.success(
           "Enquiry submitted successfully. We'll get back to you soon."
         );
+        handleReset();
       } else {
-        console.error("Server Error:", response.data);
         toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error("Network or Server Error:", error);
       toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -111,6 +106,7 @@ const EnquiryForm = ({ onClose }) => {
               placeholder="Enter your name"
               value={form.name}
               onChange={handleInputChange}
+              disabled={loading}
             />
           </div>
 
@@ -122,6 +118,7 @@ const EnquiryForm = ({ onClose }) => {
               placeholder="Enter your email"
               value={form.email}
               onChange={handleInputChange}
+              disabled={loading}
             />
           </div>
 
@@ -134,7 +131,11 @@ const EnquiryForm = ({ onClose }) => {
 
           <div className="space-y-2">
             <Label htmlFor="course">Select a Course</Label>
-            <Select value={form.course} onValueChange={handleCourseChange}>
+            <Select
+              value={form.course}
+              onValueChange={handleCourseChange}
+              disabled={loading}
+            >
               <SelectTrigger className="w-full">
                 {form.course ? courseLabels[form.course] : "Select a course"}
               </SelectTrigger>
@@ -172,6 +173,7 @@ const EnquiryForm = ({ onClose }) => {
           <div className="space-y-2">
             <Label htmlFor="note">Note</Label>
             <Textarea
+              disabled={loading}
               id="note"
               placeholder="Any specific requests or notes..."
               value={form.note}
@@ -179,8 +181,37 @@ const EnquiryForm = ({ onClose }) => {
             />
           </div>
 
-          <Button className="w-full" onClick={() => handleSubmit()}>
-            Submit Enquiry
+          <Button
+            className="w-full flex items-center justify-center"
+            onClick={handleSubmit}
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <svg
+                  className="animate-spin h-4 w-4 mr-2 text-white"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                    fill="none"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8z"
+                  />
+                </svg>
+                Submitting...
+              </>
+            ) : (
+              "Submit Enquiry"
+            )}
           </Button>
         </CardContent>
       </Card>
