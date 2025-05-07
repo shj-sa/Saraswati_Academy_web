@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
@@ -16,6 +16,7 @@ import {
 import PhoneNumber from "../components/ui/PhoneNoInput";
 import { X } from "lucide-react"; // Import X icon
 import server from "../server.json";
+import { toast } from "react-toastify";
 const courseLabels = {
   "beginners-hindi": "Beginners Hindi",
   "intermediate-hindi": "Intermediate Hindi",
@@ -77,17 +78,18 @@ const EnquiryForm = ({ onClose }) => {
       if (response.status === 200 || response.status === 201) {
         console.log("Submitted");
         handleReset(); // Reset form and close if needed
-        alert("Enquiry submitted successfully. We'll get back to you soon.");
+        toast.success(
+          "Enquiry submitted successfully. We'll get back to you soon."
+        );
       } else {
         console.error("Server Error:", response.data);
-        alert("Something went wrong. Please try again.");
+        toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Network or Server Error:", error);
-      alert("Network error. Please check your connection and try again.");
+      toast.error("Something went wrong. Please try again.");
     }
   };
-
   return (
     <div className="relative max-w-xl mx-auto">
       <Card className="rounded-2xl shadow-md relative">

@@ -11,10 +11,17 @@ import NavigationBar from "./constants/Navigation_Bar.json";
 import axios from "axios";
 import { useEffect } from "react";
 function App() {
-  useEffect(async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}`);
-    console.log(response.data);
+  useEffect(() => {
+    const awake = async () => {
+      try {
+        await axios.get(`${import.meta.env.REACT_APP_API_URL}`);
+      } catch (error) {
+        console.error("Wakeup ping failed:", error);
+      }
+    };
+    awake();
   }, []);
+
   return (
     <Routes>
       <Route path="/" element={<LandingPage></LandingPage>}></Route>

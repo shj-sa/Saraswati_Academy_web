@@ -14,7 +14,7 @@ const Navbar = () => {
 
   // constant size in px
   // const size = 1051; // for change
-  const size = 1600;
+  const size = 1280;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
