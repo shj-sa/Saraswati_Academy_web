@@ -24,7 +24,9 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Internal Server error");
 });
-
+app.get("/", (req, res) => {
+  res.send("<h1>Saraswati Academy</h1>");
+});
 const routes = require("./routes/routes");
 app.use("/api", routes);
 
