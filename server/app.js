@@ -25,7 +25,10 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal Server error");
 });
 app.get("/", (req, res) => {
-  res.send("<h1>Saraswati Academy</h1>");
+  res.send(`<h1>Saraswati Academy</h1><br>
+    
+    ${process.env.CLIENT}
+    `);
 });
 const routes = require("./routes/routes");
 app.use("/api", routes);
