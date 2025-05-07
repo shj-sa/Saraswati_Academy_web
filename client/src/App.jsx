@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./containers/Landing_Page";
-import EnquiryPage from "./lib/EnquieryForm";
 import "./App.css";
 import ContactSection from "./containers/ContactSection";
 import TestimonialsPage from "./containers/TestimonialPage";
@@ -10,6 +9,7 @@ import MediaSection from "./containers/MediaSection";
 import HiringSection from "./containers/HiringSection";
 import NavigationBar from "./constants/Navigation_Bar.json";
 import axios from "axios";
+import { useEffect } from "react";
 function App() {
   useEffect(async () => {
     const response = await axios.get(`${process.env.REACT_APP_API_URL}`);
