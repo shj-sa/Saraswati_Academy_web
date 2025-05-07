@@ -9,7 +9,12 @@ import Resource from "./containers/Resources";
 import MediaSection from "./containers/MediaSection";
 import HiringSection from "./containers/HiringSection";
 import NavigationBar from "./constants/Navigation_Bar.json";
+import axios from "axios";
 function App() {
+  useEffect(async () => {
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}`);
+    console.log(response.data);
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<LandingPage></LandingPage>}></Route>
