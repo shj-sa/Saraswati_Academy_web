@@ -6,7 +6,9 @@
   "author": "Nishant Mohan",
   "license": "MIT",
   "scripts": {
-    "release": "standard-release"
+    "release": "standard-release",
+    "build": "node app.js",
+    "dev": "node app.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
