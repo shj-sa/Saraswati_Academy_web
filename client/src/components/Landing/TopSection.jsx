@@ -11,7 +11,7 @@ const IndianLanguageLearningHero = () => {
     setShowEnquiry(!showEnquiry);
   };
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-center px-4 lg:px-16 py-10 gap-10">
+    <div className="flex flex-col lg:flex-row items-start justify-center px-4 lg:px-16  gap-10">
       {/* Text Section */}
       <div className="lg:w-1/2 order-2 lg:order-1">
         <h1 className="text-3xl lg:text-4xl font-semibold text-start mb-6">
