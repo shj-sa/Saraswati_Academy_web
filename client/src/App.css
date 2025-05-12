@@ -48,3 +48,8 @@
   display: flex;
   flex-direction: column;
 }
+/* To change the Key selling point page colour */
+
+.keyselling-color{
+     background-color: #ffc240;
+}
