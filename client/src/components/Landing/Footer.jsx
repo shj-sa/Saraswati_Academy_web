@@ -13,6 +13,7 @@ import contact from "../../constants/contactUs.json";
 import TermsAndConditionsPopup from "../LegalMatters/termsandconditions";
 import PrivacyPolicyPopup from "../LegalMatters/PrivacyPolicy";
 import { useState } from "react";
+
 const socialLinks = [
   { icon: Twitter, href: Social.twitter, id: "twitter" },
   { icon: Facebook, href: Social.facebook, id: "facebook" },
@@ -25,18 +26,22 @@ const footerLinks = [
   {
     title: "Our Courses",
     links: [
-      "Beginner Hindi",
-      "Intermediate Hindi",
-      "Advanced Hindi",
-      "Kids Special",
-      "One-on-One Tutoring",
+      { title: "Beginner Hindi", link: "/courses" },
+      { title: "Intermediate Hindi", link: "/courses" },
+      { title: "Advanced Hindi", link: "/courses" },
+      { title: "Kids Special", link: "/courses" },
     ],
   },
   {
-    title: "Resources",
-    links: ["Online Classes", "Live Sessions", "Blog", "FAQs", "Support"],
+    title: "Links",
+    links: [
+      { title: "Blog", link: "/blog" },
+      { title: "FAQs", link: "/home/#faq" },
+      { title: "Support", link: "/contact" },
+    ],
   },
 ];
+
 export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
   const [openPrivacy, setOpenPrivacy] = useState(false);
@@ -74,10 +79,10 @@ export default function Footer() {
                 {group.links.map((link) => (
                   <li key={`${group.title}-${link}`}>
                     <a
-                      href="#"
+                      href={link.link}
                       className="text-gray-400 transition-colors hover:text-white"
                     >
-                      {link}
+                      {link.title}
                     </a>
                   </li>
                 ))}
