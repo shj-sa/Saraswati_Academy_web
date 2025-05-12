@@ -23,7 +23,7 @@ const IndianLanguageLearningHero = () => {
           {Keysellingpoints.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center w-full sm:w-[48%] bg-white p-2 rounded shadow-sm"
+              className="flex items-center w-full sm:w-[48%] p-2 rounded shadow-sm"
             >
               <svg
                 width="22"
