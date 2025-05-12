@@ -10,7 +10,11 @@ import CallbackSection from "../components/ui/CallbackComp";
 const LandingPage = () => {
   return (
     <Wrapper>
-      <section id="home" className="keyselling-color" style={{ height: "fit-content", marginTop: "100px" }}>
+      <section
+        id="home"
+        className="keyselling-color"
+        style={{ height: "fit-content", marginTop: "96px" }}
+      >
         <TopSection />
       </section>
       <section id="why-us">
