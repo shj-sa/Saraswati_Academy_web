@@ -1,4 +1,4 @@
-import image from "../assets/images/image.webp";
+import image from "../assets/images/shj_icon.jpg";
 const Images = {
   founder: image,
 };
