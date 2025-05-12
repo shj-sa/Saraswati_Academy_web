@@ -65,7 +65,7 @@ const IndianLanguageLearningHero = () => {
       <div className="lg:w-1/2 order-1 lg:order-2">
         <img
           src={founderImage}
-          alt="Learn an Indian Language Online"
+          alt="Learn Hindi Language Online"
           width={600}
           height={450}
           className="rounded "
