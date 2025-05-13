@@ -5,10 +5,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Wrapper = ({ children }) => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground keyselling-color">
       <ToastContainer></ToastContainer>
       <Navbar />
-      <main>{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </div>
   );

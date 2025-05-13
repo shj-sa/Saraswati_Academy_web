@@ -13,7 +13,7 @@ const LandingPage = () => {
       <section
         id="home"
         className="keyselling-color"
-        style={{ height: "fit-content", marginTop: "96px" }}
+        style={{ height: "fit-content", marginTop: "96px", padding: "10px" }}
       >
         <TopSection />
       </section>
@@ -25,7 +25,7 @@ const LandingPage = () => {
         <Testimonials></Testimonials>
       </section>
       <CallbackSection></CallbackSection>
-      <section id="faq">
+      <section id="faq" className="bg-faq-section">
         <FAQsection />
       </section>
     </Wrapper>

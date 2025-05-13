@@ -9,7 +9,10 @@ const CallbackSection = () => {
   };
 
   return (
-    <section id="callback" className="py-16 px-4 relative overflow-hidden">
+    <section
+      id="callback"
+      className="py-16 px-4 relative overflow-hidden bg-callback-section"
+    >
       <div className="max-w-5xl mx-auto rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-indigo-950 py-12 px-6 md:px-12 text-center relative">
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">

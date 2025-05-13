@@ -53,3 +53,13 @@
 .keyselling-color{
      background-color:#ffc240;
 }
+
+/* To change the background color of callback section*/
+.bg-callback-section{
+   background-color: #ffffff;
+}
+
+/* To change the background color of FaQ*/
+.bg-faq-section{
+  background-color: #ffffff;
+}
