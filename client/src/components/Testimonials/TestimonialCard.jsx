@@ -14,7 +14,11 @@ const TestimonialCard = ({ name, profession, review, imageSrc }) => {
         <div className="relative w-16 h-16 rounded-full overflow-hidden">
           <img
             alt={`Review by ${name}`}
-            src={"https://placehold.co/400x400?text=No+Image" || imageSrc}
+            src={imageSrc || "https://placehold.co/400x400?text=No+Image"}
+            onError={(e) => {
+              e.target.onerror = null; // prevent infinite loop
+              e.target.src = "https://placehold.co/400x400?text=No+Image";
+            }}
             layout="fill"
             objectFit="cover"
             className="rounded-full"

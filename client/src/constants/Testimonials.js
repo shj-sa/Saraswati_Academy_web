@@ -1,9 +1,21 @@
-// "../assets/images/Testimonials/filename.extension"
+// "Testimonials/filename.extension"
+// Kindly add the images in folder Testimonials in public folder
+
+/**
+ * NOTE: You can add either file as mentioned above format i.e
+ * 1. File should be stored in the public folder inside Testimonials/ folder
+ * 2. In imageSrc: key Testimonials/image.extension(.png,.jpg etc..)
+ *
+ * OR
+ *
+ * 1. use online available images as
+ * https://pixabxyz.com/image.png etc any url to the image
+ */
 const testimonials = [
   {
     name: "Nitu Balwani",
     profession: "Parent",
-    imageSrc: "/Images/Testimonials/Telugu/nitu-balwani.webp",
+    imageSrc: "Testimonials/founder.png",
     review: `I am glad I chose Saraswati Hindi Jagat for my daughter's PSLE preparation. The teachers are incredibly accommodating, both with scheduling and last-minute requests. My daughter genuinely enjoyed learning from her teacher, Deepanka, whose engaging teaching style helped spark her interest in Hindi. Despite the preparation being quite last-minute, it was highly effective, and my daughter improved significantly, jumping from AL5 to AL2 in her PSLE. I plan to continue with Saraswati Hindi Jagat for her secondary education and highly recommend their services.`,
   },
   {
