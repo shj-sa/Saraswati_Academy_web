@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 app.use(
   cors({
-    origin: process.env.CLIENT || "http://localhost:5173", // Allow the frontend origin
+    origin: [process.env.CLIENT, process.env.CLIENT2], // Allow the frontend origin
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
