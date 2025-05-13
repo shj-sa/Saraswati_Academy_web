@@ -10,13 +10,22 @@ require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 
+const allowedOrigins = [process.env.CLIENT, process.env.CLIENT2];
+
 app.use(
   cors({
-    origin: [process.env.CLIENT, process.env.CLIENT2], // Allow the frontend origin
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 // Middleware for error
