@@ -15,7 +15,7 @@ const IndianLanguageLearningHero = () => {
       {/* Text Section */}
       <div className="lg:w-1/2 order-2 lg:order-1">
         <h1 className="text-3xl lg:text-4xl font-semibold text-start mb-6">
-          Learn an <span className="text-[#4b0082]">Hindi Language</span>
+          Learn <span className="text-[#4b0082]">Hindi Language</span>
           <span className="block"> anytime, anywhere </span>
         </h1>
 
