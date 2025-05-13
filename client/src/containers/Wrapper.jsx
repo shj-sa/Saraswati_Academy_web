@@ -8,7 +8,7 @@ const Wrapper = ({ children }) => {
     <div className="min-h-screen bg-background text-foreground keyselling-color">
       <ToastContainer></ToastContainer>
       <Navbar />
-      <main className="">{children}</main>
+      <main className="bg-white">{children}</main>
       <Footer />
     </div>
   );
