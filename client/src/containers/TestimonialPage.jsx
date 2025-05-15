@@ -102,11 +102,11 @@ const TestimonialsPage = () => {
                 style={{ color: "rgb(56, 108, 31)" }}
               >
                 We're excited to help you on your language learning journey. Our
-                Program Advisor will be in touch with you shortly to provide
+                Team will be in touch with you shortly to provide
                 more information and answer any questions you may have.
                 <br />
                 In the meantime, feel free to explore our Wall of Love to find
-                out more about our learner experience.
+                out more about our clients' experience.
               </p>
             </div>
           )}
@@ -119,9 +119,9 @@ const TestimonialsPage = () => {
             Our Wall of Love ❤️
           </h1>
           <p className="mx-auto p-3 text-center max-w-3xl text-sm sm:text-base text-gray-700">
-            Our testimonial page is filled with inspiring stories from Hindi
+            Our testimonial page is filled with inspiring stories from parents of Hindi
             language learners around the world who have achieved their language
-            goals with our academy. Join the community and start your own
+            goals with our academy. Join the community and start your kid's own
             language learning journey today!
           </p>
 
