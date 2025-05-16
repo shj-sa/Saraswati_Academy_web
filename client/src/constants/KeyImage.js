@@ -1,4 +1,4 @@
-import image from "../assets/images/shj_icon.png";
+import image from "../assets/images/shj_newicon.png";
 const Images = {
   founder: image,
 };
