@@ -5,39 +5,43 @@ import courseContent from "../../constants/CourseDetails.json";
 import CallbackSection from "../ui/CallbackComp";
 import EnquiryForm from "../../lib/EnquieryForm";
 const CoursesPage = () => {
-  // State to track which sections are expanded
-  const [expanded, setExpanded] = useState({
-    program1: true, // Language Enrichment Program
-    program2: false, // MOE based Curriculum
-    program3: false, // Conversational Classes
-  });
+  // Initialize expanded state with all programs collapsed except the first
+  const initialExpandedState = Object.keys(courseContent).reduce(
+    (acc, key, idx) => {
+      acc[key] = idx === 0; // first program expanded by default
+      return acc;
+    },
+    {}
+  );
 
-  // State to track which course is selected for details view
+  const [expanded, setExpanded] = useState(initialExpandedState);
+
+  // Select the first program and its first course by default
+  const firstProgramKey = Object.keys(courseContent)[0];
+  const firstCourseKey = Object.keys(courseContent[firstProgramKey].courses)[0];
+
   const [selectedCourse, setSelectedCourse] = useState({
-    program: "program1",
-    course: "beginners",
+    program: firstProgramKey,
+    course: firstCourseKey,
   });
 
-  // Toggle expanded state for program sections
-  const toggleExpanded = (section) => {
-    setExpanded({
-      ...expanded,
-      [section]: !expanded[section],
-    });
-  };
-
-  // Function to handle course selection
-  const selectCourse = (program, course) => {
-    setSelectedCourse({
-      program,
-      course,
-    });
-  };
   const [showEnquiry, setShowEnquiry] = useState(false);
 
-  const toggleEnquiry = () => {
-    setShowEnquiry(!showEnquiry);
+  const toggleExpanded = (section) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
   };
+
+  const selectCourse = (program, course) => {
+    setSelectedCourse({ program, course });
+  };
+
+  const toggleEnquiry = () => {
+    setShowEnquiry((prev) => !prev);
+  };
+
   return (
     <Wrapper>
       <div className="container mx-auto px-4 py-12 max-w-7xl">
@@ -46,191 +50,57 @@ const CoursesPage = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left sidebar - Course Navigation */}
+          {/* Left sidebar - Program & Course Navigation */}
           <div className="col-span-1 bg-gray-50 rounded-xl p-6 shadow-sm">
             <h2 className="text-xl font-bold mb-6 text-gray-800">Programs</h2>
 
-            {/* Program 1 - Language Enrichment */}
-            <div className="mb-6">
-              <button
-                className="flex justify-between items-center w-full text-left font-semibold text-gray-800 mb-2"
-                onClick={() => toggleExpanded("program1")}
-              >
-                <span className="flex items-center">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2 text-sm font-bold">
-                    1
-                  </span>
-                  Language Enrichment Program
-                </span>
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
-                    expanded.program1 ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
+            {Object.entries(courseContent).map(
+              ([programKey, programData], idx) => (
+                <div key={programKey} className="mb-6">
+                  <button
+                    className="flex justify-between items-center w-full text-left font-semibold text-gray-800 mb-2"
+                    onClick={() => toggleExpanded(programKey)}
+                  >
+                    <span className="flex items-center">
+                      <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2 text-sm font-bold">
+                        {idx + 1}
+                      </span>
+                      {programData.title}
+                    </span>
+                    <ChevronDown
+                      size={18}
+                      className={`transition-transform ${
+                        expanded[programKey] ? "transform rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-              {expanded.program1 && (
-                <ul className="ml-8 space-y-2 text-gray-600">
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program1" &&
-                        selectedCourse.course === "beginners"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program1", "beginners")}
-                    >
-                      Beginners Hindi
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program1" &&
-                        selectedCourse.course === "intermediate"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program1", "intermediate")}
-                    >
-                      Intermediate Hindi
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program1" &&
-                        selectedCourse.course === "advanced"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program1", "advanced")}
-                    >
-                      Advanced Hindi
-                    </button>
-                  </li>
-                </ul>
-              )}
-            </div>
-
-            {/* Program 2 - MOE based Curriculum */}
-            <div className="mb-6">
-              <button
-                className="flex justify-between items-center w-full text-left font-semibold text-gray-800 mb-2"
-                onClick={() => toggleExpanded("program2")}
-              >
-                <span className="flex items-center">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2 text-sm font-bold">
-                    2
-                  </span>
-                  Singapore MOE Based Curriculum
-                </span>
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
-                    expanded.program2 ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {expanded.program2 && (
-                <ul className="ml-8 space-y-2 text-gray-600">
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program2" &&
-                        selectedCourse.course === "p1p6"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program2", "p1p6")}
-                    >
-                      P1-P6
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program2" &&
-                        selectedCourse.course === "olevel"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program2", "olevel")}
-                    >
-                      Sec.- O-level
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program2" &&
-                        selectedCourse.course === "other"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program2", "other")}
-                    >
-                      Other Board Curriculum
-                    </button>
-                  </li>
-                </ul>
-              )}
-            </div>
-
-            {/* Program 3 - Conversational Classes */}
-            <div className="mb-6">
-              <button
-                className="flex justify-between items-center w-full text-left font-semibold text-gray-800 mb-2"
-                onClick={() => toggleExpanded("program3")}
-              >
-                <span className="flex items-center">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2 text-sm font-bold">
-                    3
-                  </span>
-                  Conversational Classes
-                </span>
-                <ChevronDown
-                  size={18}
-                  className={`transition-transform ${
-                    expanded.program3 ? "transform rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {expanded.program3 && (
-                <ul className="ml-8 space-y-2 text-gray-600">
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program3" &&
-                        selectedCourse.course === "kids"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program3", "kids")}
-                    >
-                      Kids
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
-                        selectedCourse.program === "program3" &&
-                        selectedCourse.course === "adults"
-                          ? "border-yellow-500 font-medium text-yellow-600"
-                          : "border-gray-200"
-                      }`}
-                      onClick={() => selectCourse("program3", "adults")}
-                    >
-                      Adults
-                    </button>
-                  </li>
-                </ul>
-              )}
-            </div>
+                  {expanded[programKey] && (
+                    <ul className="ml-8 space-y-2 text-gray-600">
+                      {Object.entries(programData.courses).map(
+                        ([courseKey, course]) => (
+                          <li key={courseKey}>
+                            <button
+                              className={`pl-2 border-l-2 hover:text-yellow-600 transition-colors ${
+                                selectedCourse.program === programKey &&
+                                selectedCourse.course === courseKey
+                                  ? "border-yellow-500 font-medium text-yellow-600"
+                                  : "border-gray-200"
+                              }`}
+                              onClick={() =>
+                                selectCourse(programKey, courseKey)
+                              }
+                            >
+                              {course.title}
+                            </button>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  )}
+                </div>
+              )
+            )}
           </div>
 
           {/* Right content - Course Details */}
@@ -313,7 +183,7 @@ const CoursesPage = () => {
 
                 <div className="mt-8 text-center">
                   <button
-                    onClick={() => toggleEnquiry()}
+                    onClick={toggleEnquiry}
                     className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-8 rounded-lg transition-colors shadow-sm"
                   >
                     Have a Query
@@ -324,7 +194,7 @@ const CoursesPage = () => {
           </div>
         </div>
       </div>
-      <CallbackSection></CallbackSection>
+      <CallbackSection />
       {/* Modal Overlay */}
       {showEnquiry && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
