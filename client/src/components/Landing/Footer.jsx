@@ -133,7 +133,7 @@ export default function Footer() {
           <p className="text-sm text-gray-400">
             Developed by{" "}
             <a
-              href="https://github.com/Nishant040305"
+              href="https://www.linkedin.com/in/nishant040305/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-400 hover:underline"
