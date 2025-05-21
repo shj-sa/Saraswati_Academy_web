@@ -125,7 +125,7 @@ const CoursesPage = () => {
                   <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2 text-sm font-bold">
                     2
                   </span>
-                  MOE Based Curriculum
+                  Singapore MOE Based Curriculum
                 </span>
                 <ChevronDown
                   size={18}
