@@ -4,7 +4,7 @@
       "id": "revision-booklets",
       "title": "Revision Booklets",
       "description": "Comprehensive materials to strengthen your Hindi knowledge",
-      icount = 1,
+      let icount = 1,
       "resources": [
         {
           "id": "beginner-booklet",
