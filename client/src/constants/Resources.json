@@ -4,13 +4,15 @@
       "id": "revision-booklets",
       "title": "Revision Booklets",
       "description": "Comprehensive materials to strengthen your Hindi knowledge",
+      var incount = 1,
       "resources": [
         {
           "id": "beginner-booklet",
           "title": "Beginner Hindi Revision Booklet",
           "description": "Essential Hindi basics with vocabulary and simple sentence structures",
           "image": "https://images.pexels.com/photos/31864392/pexels-photo-31864392.jpeg",
-          "downloadCount": 1254,
+          "downloadCount": 1254 + incount,
+          incount++,
           "level": "Beginner",
           "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
         },
