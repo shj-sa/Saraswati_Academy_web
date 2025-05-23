@@ -105,26 +105,3 @@
   ],
   "FolderUrl": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
 }
-
-function incrementDownloadCount(resourceId) {
-  // Find the resource by ID
-  const resource = data.resources.find(item => item.id === resourceId);
-  
-  if (resource) {
-    // Increment the downloadCount
-    resource.downloadCount = (resource.downloadCount || 0) + 1;
-    console.log(`Updated downloadCount for ${resourceId}: ${resource.downloadCount}`);
-  } else {
-    console.log(`Resource with ID ${resourceId} not found.`);
-  }
-  
-  // Here, you would typically save the updated 'data' back to your file, database, or API
-  // For example, if saving to a file:
-  // fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
-}
-
-// Example usage: Increment downloadCount for "beginner-booklet"
-incrementDownloadCount("beginner-booklet");
-
-// Log the updated data
-console.log(JSON.stringify(data, null, 2));
