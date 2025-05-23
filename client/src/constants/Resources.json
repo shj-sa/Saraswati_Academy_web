@@ -11,7 +11,6 @@
           "description": "Essential Hindi basics with vocabulary and simple sentence structures",
           "image": "https://images.pexels.com/photos/31864392/pexels-photo-31864392.jpeg",
           "downloadCount": 1254,
-          "downloadCount++",
           "level": "Beginner",
           "link": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
         },
@@ -106,3 +105,13 @@
   ],
   "FolderUrl": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
 }
+const express = require('express');
+const app = express();
+
+app.get('/download/:resourceId', (req, res) => {
+  const resourceId = req.params.resourceId;
+  incrementDownloadCount(resourceId); // Increment the count
+  res.redirect(data.resources.find(item => item.id === resourceId).link); // Redirect to the download link
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
