@@ -105,4 +105,4 @@
   ],
   "FolderUrl": "https://drive.google.com/file/d/1C5I-4lJ-hXL5bGQitZjyA2uk9fD-9f3W/view?usp=sharing"
 }
-fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+fs.writeFileSync('Resources.json', JSON.stringify(data, null, 2));
