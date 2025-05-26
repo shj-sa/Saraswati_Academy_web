@@ -298,20 +298,3 @@ export default function HindiResourcesPage() {
     </div>
   );
 }
-// Function to increment downloadCount
-function incrementDownloadCount(resourceId) {
-  // Find the resource by ID
-  const resource = data.resources.find(item => item.id === resourceId);
-  
-  if (resource) {
-    // Increment the downloadCount
-    resource.downloadCount = (resource.downloadCount || 0) + 1;
-    console.log(`Updated downloadCount for ${resourceId}: ${resource.downloadCount}`);
-  } else {
-    console.log(`Resource with ID ${resourceId} not found.`);
-  }
-  
-  // Here, you would typically save the updated 'data' back to your file, database, or API
-  // For example, if saving to a file:
-  // fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
-}
