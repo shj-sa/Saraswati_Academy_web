@@ -61,13 +61,13 @@
     "achievements": [
       {
         "id": 1,
-        "title": "Education Excellence Award 2025",
-        "date": "2025-01-20",
-        "organization": "Language Education Council",
-        "image": "/api/placeholder/400/240",
-        "content": "**Awarded for:**\n\n- Excellence in **curriculum design**\n- Innovative **teaching methodology**\n- Commitment to **student success and inclusion**\n\nOur institute was honored at the annual Education Excellence Gala held in Singapore, celebrating our contribution towards making Hindi learning a rewarding and transformative experience for learners of all ages."
+        "title": "Certificate of Academic Achievement by our student",
+        "date": "2021-06-20",
+        "organization": "D.A.V Hindi School - Singapore",
+        "image": "MediaCoverage/achieve1.jpg",
+        "content": "**Awarded to our Class P5 Student for:**\n\n- being **FIRST**\n- in Hindi as a Mother Tongue Language in **Primary Five**."
       },
-      {
+      /* {
         "id": 2,
         "title": "Cultural Bridge Award",
         "date": "2025-03-22",
@@ -98,7 +98,7 @@
         "organization": "Digital Learning Forum",
         "image": "/api/placeholder/400/240",
         "content": "**Recognized for outstanding performance** in adapting to digital education trends, our online Hindi programs have achieved an **enrollment growth of 120%** in just one year.\n\n**Achievements include:**\n\n- Launch of **on-demand video courses**\n- Integration of **AI-driven progress tracking**\n- **Global student base** across 15+ countries\n\nWe are proud to set new standards for language learning in a connected world."
-      }
+      } */
     ]
   }
   
