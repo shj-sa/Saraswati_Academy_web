@@ -1,4 +1,7 @@
-{
+
+
+
+   v {
     "mediaCoverage": [
       {
         "id": 1,
@@ -33,17 +36,17 @@
         "date": "2024-09-12",
         "source": "Saraswati Hindi Jagat",
         "image": "/api/placeholder/400/240",
-        "content": "On the auspicious occasion of **हिंदी दिवस २०२४** and in the loving memory of nationally acclaimed and famous writer and journalist *Late Shri Naresh Misra*, we organized *हिंदी मेधा पुरस्कार* together with Nehru Gram Bharati University. \n\n **Highlights** of the event: A Hindi Speech Competition was organized for the students of Prayagraj city in Uttar Pradesh, in the esteemed prescence of Member of the Uttar Pradesh Legislative Council, *Shri Man Singh Yadav*, along with CRC Officer Mr. Shantanu Khare and Ms. Shivani Srivastava of the Nehru Gram Bharati University.",
+        "content": "On the auspicious occasion of **हिंदी दिवस २०२४** and in the loving memory of nationally acclaimed famous writer and journalist *Late Shri Naresh Misra*, we organized *हिंदी मेधा पुरस्कार* together with Nehru Gram Bharati University. \n\n **Highlights** of the event: A Hindi Speech Competition was organized for the students of Prayagraj city in Uttar Pradesh, in the esteemed prescence of Member of the Uttar Pradesh Legislative Council, *Shri Man Singh Yadav*, along with CRC Officer Mr. Shantanu Khare and Ms. Shivani Srivastava of the Nehru Gram Bharati University.",
         "link": "https://www.livehindustan.com/uttar-pradesh/prayagraj/story-hindi-medha-award-2024-celebrated-in-prayagraj-to-inspire-young-generation-in-hindi-literature-201726150367208.html"
       },
       {
         "id": 5,
-        "title": "Spotlight on Cultural Literacy",
-        "date": "2025-06-05",
-        "source": "Culture Connect",
+        "title": "Hindi Diwas 2023 - Press Meet, Lucknow",
+        "date": "2023-09-14",
+        "source": "Saraswati Hindi Jagat",
         "image": "/api/placeholder/400/240",
-        "content": "*Culture Connect* praised our focus on **cultural literacy** as a fundamental part of language learning.\n\nOur unique programs include:\n\n- **Storytelling sessions** featuring traditional Indian folklore\n- **Festivals and cultural immersion events**\n- **Hindi drama workshops** for youth and adults\n\n> _\"Language is more than words—it's a window into a people's soul. This institute opens that window wide.\"_\n\n[Learn about our cultural programs](https://example.com/article5)",
-        "link": "https://example.com/article5"
+        "content": "*Saraswati Hindi Jagat* on the occassion of **Hindi Diwas 2023** organized a press meet at the famous *Indian Coffee House, Hazratganj, Lucknow*.\n\n- **Purpose of the meet** was to discuss on the importance of how Hindi can be lever to unlock a huge opportunity for Indian women and housewives.\n\n[View video](https://www.youtube.com/watch?app=desktop&v=9DO1BpQADlg)",
+        "link": "https://www.youtube.com/watch?app=desktop&v=9DO1BpQADlg"
       },
       {
         "id": 6,
