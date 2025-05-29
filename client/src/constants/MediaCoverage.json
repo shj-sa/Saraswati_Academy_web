@@ -1,7 +1,7 @@
 
 
 
-   v {
+   {
     "mediaCoverage": [
       {
         "id": 1,
@@ -35,7 +35,7 @@
         "title": "हिंदी मेधा पुरस्कार २०२४",
         "date": "2024-09-12",
         "source": "Saraswati Hindi Jagat",
-        "image": "/api/placeholder/400/240",
+        "image": "MediaCoverage/mediacover4.jpg",
         "content": "On the auspicious occasion of **हिंदी दिवस २०२४** and in the loving memory of nationally acclaimed famous writer and journalist *Late Shri Naresh Misra*, we organized *हिंदी मेधा पुरस्कार* together with Nehru Gram Bharati University. \n\n **Highlights** of the event: A Hindi Speech Competition was organized for the students of Prayagraj city in Uttar Pradesh, in the esteemed prescence of Member of the Uttar Pradesh Legislative Council, *Shri Man Singh Yadav*, along with CRC Officer Mr. Shantanu Khare and Ms. Shivani Srivastava of the Nehru Gram Bharati University.",
         "link": "https://www.livehindustan.com/uttar-pradesh/prayagraj/story-hindi-medha-award-2024-celebrated-in-prayagraj-to-inspire-young-generation-in-hindi-literature-201726150367208.html"
       },
