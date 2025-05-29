@@ -13,7 +13,7 @@ const whyUsPoints = [
     image: img2,
   },
   {
-    text: "Providing an exclusive global job market to Hindi teachers all over the country.",
+    text: "Providing an exclusive global job market to female Hindi teachers all over the country.",
     image: img3,
   },
   {
