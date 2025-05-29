@@ -45,8 +45,8 @@
         "date": "2023-09-14",
         "source": "Saraswati Hindi Jagat",
         "image": "MediaCoverage/mediacover5.jpg",
-        "content": "*Saraswati Hindi Jagat* on the occassion of **Hindi Diwas 2023** organized a press meet at the famous *Indian Coffee House, Hazratganj, Lucknow*.\n\n- **Purpose of the meet** was to discuss on the importance of how Hindi can be lever to unlock a huge opportunity for Indian women and housewives.\n\n[View video](https://www.youtube.com/watch?app=desktop&v=9DO1BpQADlg)",
-        "link": "https://www.youtube.com/watch?app=desktop&v=9DO1BpQADlg"
+        "content": "*Saraswati Hindi Jagat* on the occassion of **Hindi Diwas 2023** organized a press meet at the famous *Indian Coffee House, Hazratganj, Lucknow*.\n\n- **Purpose of the meet** was to discuss on the importance of how Hindi can be lever to unlock a huge opportunity for Indian women and housewives.\n\n[Watch Video](https://www.youtube.com/watch?v=jenpbacVaQA)",
+        "link": "https://www.cherishtimes.in/uttar-pradesh/38829"
       },
       {
         "id": 6,
@@ -66,39 +66,7 @@
         "organization": "D.A.V Hindi School - Singapore",
         "image": "MediaCoverage/achieve1.jpg",
         "content": "**Awarded to our Class P5 Student for:**\n\n- being **FIRST**\n- in Hindi as a Mother Tongue Language in **Primary Five**."
-      },
-      /* {
-        "id": 2,
-        "title": "Cultural Bridge Award",
-        "date": "2025-03-22",
-        "organization": "International Cultural Association",
-        "image": "/api/placeholder/400/240",
-        "content": "We are proud recipients of the **Cultural Bridge Award**, presented by the *International Cultural Association*.\n\n**Award highlights:**\n\n- Strengthening ties between **Singaporean** and **Indian** communities\n- Hosting **over 50 cultural exchange events** in 2024 alone\n- Publishing a **bilingual children's storybook series** to promote early cultural understanding\n\n> _\"The institute serves as a vibrant hub where language and culture unite.\"_"
-      },
-      {
-        "id": 3,
-        "title": "Top 10 Language Institutes",
-        "date": "2025-02-05",
-        "organization": "Education Excellence",
-        "image": "/api/placeholder/400/240",
-        "content": "Rated among the **Top 10 Language Institutes** of 2025 by *Education Excellence*, after rigorous evaluation based on:\n\n- **Student performance metrics**\n- **Innovative classroom practices**\n- **Community outreach efforts**\n\nOur approach to holistic education places strong emphasis on **practical communication**, **cultural knowledge**, and **student well-being**."
-      },
-      {
-        "id": 4,
-        "title": "Best Curriculum Innovation Award",
-        "date": "2025-04-15",
-        "organization": "Global Language Awards",
-        "image": "/api/placeholder/400/240",
-        "content": "Our institute received the **Best Curriculum Innovation Award** for creating a dynamic, flexible syllabus that adapts to students' needs.\n\nThe new curriculum emphasizes:\n\n- **Conversational fluency** from the first lesson\n- **Real-world tasks** instead of rote memorization\n- **Cross-cultural communication skills**\n\n> _\"An exemplary model of progressive language education,\"_ said the judging panel."
-      },
-      {
-        "id": 5,
-        "title": "Excellence in Online Learning",
-        "date": "2025-05-01",
-        "organization": "Digital Learning Forum",
-        "image": "/api/placeholder/400/240",
-        "content": "**Recognized for outstanding performance** in adapting to digital education trends, our online Hindi programs have achieved an **enrollment growth of 120%** in just one year.\n\n**Achievements include:**\n\n- Launch of **on-demand video courses**\n- Integration of **AI-driven progress tracking**\n- **Global student base** across 15+ countries\n\nWe are proud to set new standards for language learning in a connected world."
-      } */
+      }
     ]
   }
   
