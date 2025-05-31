@@ -37,7 +37,7 @@ const footerLinks = [
   {
     title: "Links",
     links: [
-      { title: "Blog", link: https://saraswatihindijagat.blogspot.com/ },
+      { title: "Blog", link: "https://saraswatihindijagat.blogspot.com/" },
       { title: "FAQs", link: "/home/#faq" },
       { title: "Support", link: "/contact" },
     ],
