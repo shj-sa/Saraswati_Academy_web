@@ -7,21 +7,22 @@ import {
   Mail,
   Youtube,
   Linkedin,
-  Blogger,
 } from "lucide-react";
+import { FaBlogger } from "react-icons/fa";
 import Social from "../../constants/socialLinks.json";
 import contact from "../../constants/contactUs.json";
 import TermsAndConditionsPopup from "../LegalMatters/termsandconditions";
 import PrivacyPolicyPopup from "../LegalMatters/PrivacyPolicy";
 import { useState } from "react";
-
+import TwitterX from "../../assets/svg/TwitterX";
+// import Blogger from "../../assets/svg/Blogger";
 const socialLinks = [
-  { icon: X, href: Social.twitter, id: "twitter" },
+  { icon: TwitterX, href: Social.twitter, id: "twitter" },
   { icon: Facebook, href: Social.facebook, id: "facebook" },
   { icon: Instagram, href: Social.instagram, id: "instagram" },
   { icon: Youtube, href: Social.youtube, id: "youtube" },
   { icon: Linkedin, href: Social.linkedin, id: "linkedin" },
-  { icon: Blogger, href: Social.Blogger, id: "Blogger" },
+  { icon: FaBlogger, href: Social.Blogger, id: "Blogger" },
 ];
 
 const footerLinks = [
