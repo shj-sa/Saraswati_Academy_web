@@ -1,8 +1,8 @@
-import img1 from "../assets/images/ImageS1.jpg";
-import img2 from "../assets/images/ImageS2.jpg";
-import img3 from "../assets/images/ImageS3.jpg";
-import img4 from "../assets/images/ImageS4.jpg";
-import img5 from "../assets/images/ImageS12.jpg";
+import img1 from "../assets/images/ImageS12.jpg";
+import img2 from "../assets/images/ImageS1.jpg";
+import img3 from "../assets/images/ImageS2.jpg";
+import img4 from "../assets/images/ImageS3.jpg";
+import img5 from "../assets/images/ImageS4.jpg";
 const whyUsPoints = [
   {
     text: "Possibly India's first Hindi Startup!",
