@@ -5,6 +5,15 @@
     "mediaCoverage": [
       {
         "id": 1,
+        "title": "BHARATPRENEURS 2025",
+        "date": "2025-06-27",
+        "source": "bharatpreneurs.org",
+        "image": "MediaCoverage/mediacover0a.jpg",
+        "content": " BharatPreneurs - India's Biggest Growth Conclave for Entrepreneurs & SMEs organized a grand event at The Leela Palace, New Delhi. **Our Founder and CEO** Priyanka Mishra engaged with various esteemed Industry Leaders at the event.\n\n The event brought together professionals, MSME & SME owners, investors, and thought leaders from various sectors to share knowledge, insights, network, and foster meaningful connections.,\n\n**Key highlights**:[ About the event](https://www.bharatpreneurs.org/bharatprenuer-2025)",
+        "link": "https://www.bharatpreneurs.org/event.html"
+      },
+       {
+        "id": 2,
         "title": "MSME Bharat Summit 2025",
         "date": "2025-05-06",
         "source": "Tehelka.com",
@@ -13,7 +22,7 @@
         "link": "https://tehelka.com/msme-sampark-organises-msme-bharat-summit-2025-in-delhi/"
       },
       {
-        "id": 2,
+        "id": 3,
         "title": "FRANCHISE INDIA 2025",
         "date": "2025-05-18",
         "source": "thewire.in",
@@ -22,7 +31,7 @@
         "link": "https://thewire.in/ptiprnews/franchise-india-expo-2025-set-to-power-rs-2000-crore-in-franchise-and-startup-investments-across-india"
       },
       {
-        "id": 3,
+        "id": 4,
         "title": "HINDI EXCELLENCE SUMMIT, DELHI",
         "date": "2025-02-22",
         "source": "GlobalHindi.Org",
@@ -31,7 +40,7 @@
         "link": "https://globalhindi.org/hindi-excellence-summit/"
       },
       {
-        "id": 4,
+        "id": 5,
         "title": "हिंदी मेधा पुरस्कार २०२४",
         "date": "2024-09-12",
         "source": "Saraswati Hindi Jagat",
@@ -40,7 +49,7 @@
         "link": "https://www.livehindustan.com/uttar-pradesh/prayagraj/story-hindi-medha-award-2024-celebrated-in-prayagraj-to-inspire-young-generation-in-hindi-literature-201726150367208.html"
       },
       {
-        "id": 5,
+        "id": 6,
         "title": "Hindi Diwas 2023 - Press Meet, Lucknow",
         "date": "2023-09-14",
         "source": "Saraswati Hindi Jagat",
@@ -49,7 +58,7 @@
         "link": "https://www.cherishtimes.in/uttar-pradesh/38829"
       },
       {
-        "id": 6,
+        "id": 7,
         "title": "Hindi Diwas 2022",
         "date": "2022-09-14",
         "source": "Jagran.com",
