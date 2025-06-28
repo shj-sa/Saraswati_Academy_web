@@ -12,7 +12,7 @@ const Testimonials = () => {
         className="text-center sm:text-3xl font-bold pt-4"
         style={{ fontSize: "40px" }}
       >
-        See what our learners have to say
+        See what parents of our students have to say
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-3">
         {visibleTestimonials.map((testimonial, index) => (
