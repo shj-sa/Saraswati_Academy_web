@@ -267,7 +267,7 @@ export default function HindiResourcesPage() {
                     </div>
                     <span className="ml-2 text-gray-600">4,251 downloads</span>
                   </div>
-                  <button
+{/*                   <button
                     className="bg-purple-700 hover:bg-purple-800 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                     onClick={() => handleDownload(resource.FolderUrl)}
                   >
@@ -286,7 +286,7 @@ export default function HindiResourcesPage() {
                       ></path>
                     </svg>
                     Download Now
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
