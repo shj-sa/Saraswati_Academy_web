@@ -130,8 +130,8 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 border-t border-gray-700 md:flex-row">
           <p className="text-sm text-gray-400" style={{ fontStyle: "italic" }}>
-            © {new Date().getFullYear()} Saraswati Hindi Jagat - A Saraswati
-            Academy, India and Saraswati Enterprises Private Limited, Singapore Initiative. All rights reserved.
+            © {new Date().getFullYear()} Saraswati Hindi Jagat - A <b>Saraswati
+            Academy, India</b> and <b>Saraswati Enterprises Private Limited, Singapore</b> Initiative. All rights reserved.
           </p>
           <p className="text-sm text-gray-400">
             Developed by{" "}
